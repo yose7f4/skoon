@@ -58,7 +58,7 @@ export default function AboutPage() {
             </div>
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden bg-surface">
               <Image
-                src="/images/products/beanbag-navy.jpg"
+                src="/images/products/lounger navy.jpg"
                 alt="Sukoon Nest bean bag in navy"
                 fill
                 className="object-cover"
