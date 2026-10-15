@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#fe9f69","on-primary-container":"#f2fff5","inverse-primary":"#accebb","surface-container-highest":"#e9e1dc","on-tertiary-fixed":"#2c1608","background":"#fff8f5","on-tertiary":"#ffffff","tertiary-container":"#8e6d5a","on-secondary-fixed-variant":"#763305","card":"#FAF8F5","primary-fixed":"#c8ebd6","on-error":"#ffffff","surface-dim":"#e1d8d4","on-secondary-container":"#763405","primary-light":"#7A9B8A","on-error-container":"#93000a","on-surface-variant":"#424844","on-tertiary-container":"#fffbfa","surface-bright":"#fff8f5","error":"#ba1a1a","muted-subtle":"#D4CFC8","secondary":"#944a1c","surface-container-lowest":"#ffffff","on-surface":"#1e1b18","on-primary-fixed-variant":"#2e4d3e","on-secondary-fixed":"#331100","outline-variant":"#c1c8c2","surface-tint":"#466555","secondary-fixed":"#ffdbca","border":"#E5DFD8","destructive":"#C44040","primary-container":"#5b7b6a","tertiary":"#735543","on-background":"#1e1b18","on-tertiary-fixed-variant":"#5d4030","tertiary-fixed-dim":"#e7bea8","muted-foreground":"#7A756E","primary":"#436252","secondary-fixed-dim":"#ffb68f","accent-hover":"#A85D33","inverse-on-surface":"#f8efea","on-primary-fixed":"#012114","surface-variant":"#e9e1dc","inverse-surface":"#34302c","primary-fixed-dim":"#accebb","error-container":"#ffdad6","on-primary":"#ffffff","surface-container":"#f5ece7","outline":"#727974","on-secondary":"#ffffff","surface":"#F5F0EB","surface-container-low":"#fbf2ed","tertiary-fixed":"#ffdbc8","surface-container-high":"#efe6e2"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xxl":"4rem",gutter:"1.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-desktop":"5rem","section-lg":"8rem","space-md":"1rem","gutter-desktop":"2rem",margin:"1.25rem","space-sm":"0.5rem",section:"6rem","space-xs":"0.25rem","margin-tablet":"2.5rem"},fontFamily:{"label-md":["DM Sans"],"label-sm":["DM Sans"],"headline-xl":["EB Garamond"],"headline-xxl":["EB Garamond"],"body-lg":["DM Sans"],"headline-md":["EB Garamond"],"headline-xxl-mobile":["EB Garamond"],"headline-xl-mobile":["EB Garamond"],"body-xl":["DM Sans"],"headline-lg":["EB Garamond"],"body-md":["DM Sans"],"headline-sm":["EB Garamond"],"label-lg":["DM Sans"]},fontSize:{"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.015em",fontWeight:"400"}],"headline-xxl":["56px",{lineHeight:"64px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-md":["26px",{lineHeight:"32px",fontWeight:"500"}],"headline-xxl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.015em",fontWeight:"400"}],"headline-xl-mobile":["30px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-xl":["18px",{lineHeight:"30px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"38px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"23px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["15px",{lineHeight:"20px",fontWeight:"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(60,36,21,0.04)]"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="collection" href="#"><span class="font-headline-lg text-headline-lg text-on-surface tracking-tight group-hover:text-primary transition-colors">Skoon</span><span class="font-headline-sm text-headline-sm text-primary tracking-normal font-normal">سكون</span></a><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Collection</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="custom-and-b2b" href="#">Custom &amp; B2B</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="craftsmanship" href="#">Craftsmanship</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="our-story" href="#">Our Story</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-card rounded-full px-space-md py-space-xs"><span class="material-symbols-outlined text-outline text-lg mr-space-xs">search</span><input class="bg-transparent border-0 outline-none text-on-surface placeholder:text-muted-foreground font-body-md text-body-md w-44 lg:w-56 focus:ring-0" placeholder="Search mindful living..." type="text"/></div><div class="hidden sm:flex items-center bg-card rounded-full px-space-sm py-space-xs"><button class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary" type="button">SAR</button><button class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">USD</button></div><a class="relative flex items-center justify-center p-space-xs text-on-surface-variant hover:text-primary transition-colors" data-path="cart" href="#"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -top-1 -right-1 bg-secondary text-on-secondary rounded-full w-4 h-4 flex items-center justify-center font-label-sm text-[10px]">2</span></a><a class="flex items-center" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1XDUAkJzE3GkQoV3Ivo-ZCOjjI6HGecmujvyl26zsoSfoXXjnsuxXJfJpPtTjcQaO3VctN6w1yFCJdRdJPGAmn7DHHzk0sUeyzUS8H4tpEq2Wubpb_8b7vazUTQwWY5Sm5wCdEWcboIlBDNTnrc2OjR4PKlQaGfihQYDqCr2Y7GZElO4G-WOYc6JoPHADFChLBPUmZgaSiIUWIfiM6AfVotVVlqtS_w7np6zvebrieyPCfP6HRwCCZpOzmEOlwSFhlXWm7BVzxn_pM"/></a></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute top-12 left-1/4 w-96 h-96 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute top-80 right-10 w-80 h-80 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<!-- Breadcrumb & Top Utility -->
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop pt-space-md pb-space-sm">
+<nav class="flex items-center gap-space-xs font-label-sm text-label-sm text-muted-foreground uppercase tracking-wider">
+<a class="hover:text-primary transition-colors" href="#">Sanctuary</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="#">Seating Collection</a>
+<span>/</span>
+<span class="text-on-surface font-semibold">The Sanctuary Lounger</span>
+</nav>
+</div>
+<!-- MAIN PRODUCT SECTION: Two-Column Showcase -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-md lg:py-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT: Editorial Product Visuals (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Main Hero Stage -->
+<div class="relative w-full aspect-[4/4.2] sm:aspect-[4/3.8] bg-surface-container rounded-2xl overflow-hidden shadow-sm flex items-center justify-center group">
+<img alt="The Sanctuary Lounger in Striped Noir &amp; Cream linen weave" class="w-full h-full object-cover object-center transition-all duration-700 ease-out group-hover:scale-105" id="main-product-view" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw8kvqJ1Fu28HM8lYDEQe6hhmCpB1fmLnbF3hjfbFT6L7l0yWCFmHsn_ow9DFsW-kVtsd8XzblflkKw63nY1VETiU2vPpcg9rK4imt75exdILcex-GSILnqsJjy81QrLsVZKppx5t_-dxIA1WGQN2H6kbmmJR5rU-5cIJo0bcwPCCcFH7fI5RbsVJ5Sk0OeWQGWGe8NpD-O8a5Jgc8LxK_qekVBVn2CsnWkuhlwGWJjishcOuyBkgAVlBwh2SixGW-LV8"/>
+<!-- Top Left Architectural Badges -->
+<div class="absolute top-4 left-4 flex flex-col gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+                Artisanal Batch 08 • Limited
+              </span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/85 backdrop-blur-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-sm text-primary">eco</span>
+                100% Organic Linen-Cotton
+              </span>
+</div>
+<!-- Floating Spatial Tag Bottom Right -->
+<div class="absolute bottom-4 right-4 bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-xl shadow-sm flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-base text-secondary">verified</span>
+<span class="font-label-sm text-label-sm">Hand-stitched in Riyadh</span>
+</div>
+</div>
+<!-- Colorway & Perspective Switcher Strip -->
+<div class="grid grid-cols-4 gap-space-sm sm:gap-space-md">
+<!-- Thumb 1: Noir & Cream -->
+<button class="thumb-btn group flex flex-col gap-1 text-left p-1.5 rounded-xl bg-surface-container transition-all ring-2 ring-primary" data-variant="noir" onclick="selectColorway('noir', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCj7Ha1jHdY1Gc79UfWFau6YtUxF9nHZ3E_Bb4bF4gGwEt5l_bcOYUQFhTzsH9p5145FXxYpZv8E910xKOJYgOqSPloUgoUKaARlYvveiFOr3668bIon8vf6FvIXVodzlNjrnTBmcc6c_ZIEtF-vNrQIlmklc9aiO7coKOt4phlxSsIJNkCOk9tKFj3DiFj8R2F8Oe8xelU-_TyNgQrD9eKijnWbPN0h5r5-4qAYDsuotrVqlLsee9bYZbEEUUhKO9gIKg', 'Striped Noir &amp; Cream', 'Organic French Linen &amp; Cotton')" type="button">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-card">
+<img alt="Noir &amp; Cream" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWScGqv7tyKt4gqdC-SpFQBBTrWZkNY1lMnoUhBJQ6X38LdcOMiwh_17D4I2SdxKXL3_N8c3tyc4GE_0_6BYvhVS2-TYTqjkLuPQ4hPNvYfzLM-y6BZPFw_yjMYCi39Oq4tijn-_LbSXRuoSKWXjcFhjoxQbNyapdWfIJqLcA7d8xUU7B8uE34H8oNeetzieyxV9sbpcdc_Bn9OUlYhQAE9J2qY7wdmTsrn0XEQysgwuNh8c17FXjRxIp7YxhC6Sd5Uks"/>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface truncate px-0.5">Striped Noir</span>
+</button>
+<!-- Thumb 2: Coastal Indigo -->
+<button class="thumb-btn group flex flex-col gap-1 text-left p-1.5 rounded-xl bg-surface-container transition-all hover:bg-surface-variant" data-variant="indigo" onclick="selectColorway('indigo', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBRiaP-E1isiREXs5STTJR4mgd4lHiXPnjwiDozDMf8EHyAqkfzkRrWBQga_cGJqyJ8N6A7RvGIZjKsMm9Bkd30HHpCFZP7SYPryqGHR_cDj9kBOTcgseGE-VCMHNAfphAgYkwlgRqAwfeBCcVznvDmrAaT58Yzh50pZxiCJ1fQme3pNFyTDJKlkae2P9FA7GvOBuxD8vKwPd-IqV-397gUh4b4EzdKmpVj41yYML49-v-0YLBLTwHHh4Q9Y0eekMxeJ9g', 'Coastal Indigo &amp; Cream', 'Indigo Washed Organic Linen')" type="button">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-card">
+<img alt="Coastal Indigo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1XWOI_AJ9La52_tuxJOBedzuiIZrIB-ofd1_W6f2lYgi6ukOM20oKSdePfZ_5MG9CWL998-f9K6P_0bcxdWK8cGwI__X4HdzL8na1t_z6DPCq4Mxhh80K4T0qa1d5iywWs-9iz9_SOrtujZqvbdmzDayPxtDmyO9QyRXeSDmO464G9AOWIJUcue72NtZbd_BxEYpZSInUfO49LlgFPp_26qCO0fl8FRQrlgT7AozONR8EpOWCPwtFd_Iomq0fziGpfM"/>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground group-hover:text-on-surface truncate px-0.5">Coastal Indigo</span>
+</button>
+<!-- Thumb 3: Heritage Crimson -->
+<button class="thumb-btn group flex flex-col gap-1 text-left p-1.5 rounded-xl bg-surface-container transition-all hover:bg-surface-variant" data-variant="crimson" onclick="selectColorway('crimson', 'https://lh3.googleusercontent.com/aida-public/AB6AXuCSByf0L2kSYTQrGLeUYRo1y46mIlptyklKZJxW9s4JEDjD18Xu_5s78CDfDQJRIVmELW8sH7N2A6i4kjZAmyaVCRj-L2IkYWy2Kq1rstV7n8LUV2NKcgoH6u6AqAF_9pxbnD_LObF0uuUBbizBQM330o1S8w1pVaY051c4Q27ySaC5HakcJTBDBSclvWsSWdOiL_PXsn3patedB03twvURxNJokFfpzU05flpbq9TBC3VcVq15u1j-24aZdsBAhO0tuBI', 'Heritage Crimson Stripe', 'Natural Cotton &amp; Madder Weave')" type="button">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-card">
+<img alt="Heritage Crimson" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-UEUix2GggW5ep3y1ixCJvN8g-3HrEEPoQy-yWYEEZlubkil99TH4LA62WgOFyyN0PtIyADVoU4FbZiVGqbw8p3n1Bda27bkZw_dfWkcaTkh9DSwWhyJXgpuHXIU0PBl3_42LyVYVJjpEFgNkWtFP8eVxLZ75eX83iXFgKNTq5YAgOXWnUK88nEwR9061MEcf5DUbf2SZOKUjg_PFxx1oB8oRwUiMbiU9pQi5cAvQ8vNXVF-8OzaJ1QEPKXPZPX_pIV8"/>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground group-hover:text-on-surface truncate px-0.5">Heritage Crimson</span>
+</button>
+<!-- Thumb 4: Matte Onyx Solid -->
+<button class="thumb-btn group flex flex-col gap-1 text-left p-1.5 rounded-xl bg-surface-container transition-all hover:bg-surface-variant" data-variant="onyx" onclick="selectColorway('onyx', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAleZCI-W18sHQMvFcbqhXpNACuVDtgTyM0xZlJKPTqX-kiSmPzbyO4EDaN_DgxMT5noLPbSDEKiz1mw_hXzEVb1WSjgPvJpCqteD3xaxZeDo0ipnNEt0xFe0_u0kQiIq2ZTobbsZPGB2FXL3WGEYkTkilNWrdynNulERL2t2S-LkuWjICDKubBvuCMfUaML5muagLPYCU3qtGtb4M0PyAQeJXnNj9-90RRRABDu-9B0UwC5xGuaMSdKCV1uXAGOaaWGM8', 'Matte Onyx Teardrop', 'Water-Repellent Brushed Canvas')" type="button">
+<div class="w-full aspect-square rounded-lg overflow-hidden bg-card">
+<img alt="Matte Onyx" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2utTvYEcaK6fq7HKvDwsftlMRntd3CWwkPYBgAdkXxGyoNeuum-VsoU8b6TteIpww-dNTegApHIRTKkvM057pKSJAbe17IMOGJDUFxL_X6uDq8bIJouA9EECGKaPo2sL4xT49GW-PTcAuuq73QbTM4DrO5VzYDOgoxpINqr6E8BjImplhXXG5D67xSwQohySprOO_1iCbl0w9VEK9zZy5cgKyH-skiiI14rVbrljYjEts1rBec7068z9wD0Yo93f918U"/>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground group-hover:text-on-surface truncate px-0.5">Matte Onyx</span>
+</button>
+</div>
+<!-- Micro-Proof Metric Banner -->
+<div class="bg-card p-space-md rounded-2xl flex flex-wrap items-center justify-between gap-space-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="material-symbols-outlined text-primary text-xl">volume_off</span>
+<span><strong>Acoustic Hush:</strong> Silent virgin beads prevent any rustle</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-md text-label-md">
+<span class="material-symbols-outlined text-secondary text-xl">nest_eco_leaf</span>
+<span>OEKO-TEX® Certified Yarns</span>
+</div>
+</div>
+</div>
+<!-- RIGHT: Customization & Purchase Panel (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md lg:sticky lg:top-24">
+<!-- Product Title & Narrative Header -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Flagship Lounger</span>
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">4.9</span>
+<a class="font-label-sm text-label-sm text-muted-foreground underline hover:text-primary transition-colors" href="#reviews">(128 reviews)</a>
+</div>
+</div>
+<div class="flex items-baseline justify-between gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">The Sanctuary</h1>
+<span class="font-headline-md text-headline-md text-primary font-normal">أريكة سكون</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Sculpted for quiet contemplation and ergonomic spine support. Tailored in Riyadh with organic French linen panels and filled with custom noiseless micro-pearls that contour without collapsing.
+            </p>
+</div>
+<!-- Pricing & Installment Pill -->
+<div class="bg-card p-space-md rounded-2xl flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg text-on-surface font-semibold" id="display-price">SAR 1,250</span>
+<span class="font-label-sm text-label-sm text-muted-foreground">Incl. 15% VAT</span>
+<span class="ml-auto font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-semibold">In Stock &amp; Ready</span>
+</div>
+<!-- Installment Notice -->
+<div class="flex items-center gap-2 pt-1 font-body-md text-body-md text-on-surface-variant">
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded font-semibold text-on-surface">Tabby / Tamara</span>
+<span>4 interest-free payments of <strong>SAR 312.50</strong></span>
+</div>
+</div>
+<!-- Fabric Colorway Selection -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-baseline font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Weave &amp; Edition:</span>
+<span class="text-muted-foreground" id="selected-fabric-name">Striped Noir &amp; Cream</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="fabric-opt flex items-center gap-space-xs p-space-xs rounded-xl bg-surface-container ring-1 ring-primary text-left transition-all" data-opt="noir" onclick="selectColorway('noir', 'https://lh3.googleusercontent.com/aida-public/AB6AXuAKpeNSny2cfW1jRTFnMWzbEw0kBv6dm1GpFDegdAD0TaVIEC4YPOKb4b8wuuaQOXSM4yg-42eu_TiIVLYIxLH-Aa2y3hkdpuGODXihod4i9_64GPEC8l2PkFkwvgnfd1pQ4bh65Pq2msmHM9ivmUwcKDw2F8xfF0Iyb_sXfhu1JIh542UQ8w_dRHAhCfEtWjNwP3_ESOzdHBAGlNk2Wja-LhygDy1oFmfLT9rGK58KpXsghkFvdKglPdWQzLEONE1G3Ro', 'Striped Noir &amp; Cream', 'Organic French Linen &amp; Cotton')" type="button">
+<div class="w-8 h-8 rounded-lg bg-[#2B2B2B] flex-shrink-0 flex items-center justify-center">
+<div class="w-3 h-8 bg-surface-container rotate-45 opacity-60"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Noir Stripe</span>
+<span class="font-label-sm text-[10px] text-muted-foreground truncate">Organic Linen</span>
+</div>
+</button>
+<button class="fabric-opt flex items-center gap-space-xs p-space-xs rounded-xl bg-card text-left transition-all hover:bg-surface-container" data-opt="indigo" onclick="selectColorway('indigo', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDz4sDzvshy8MQBMiGvSwn54aNvbclMRMKoqapP8lmYRMxm8AnjYHExEVbR-fYMvrfTemX_0SyGYre0IkQs_j5iapBk4eO7phGVMH6zgrkNZae2YtnjFD6fvJQxIslVk6a_ImZcuKORqFWoiKJhA7NH_Oe8Es3a7q1LUskSlKKxvMrifmmmvX8qOmWd-qiVOSjuaR-UAvsHEqBT88fbvNRx_kqxu3qhYXqutBv5vibNV3pVKYlVPhafowwwqCska0wHVew', 'Coastal Indigo &amp; Cream', 'Indigo Washed Organic Linen')" type="button">
+<div class="w-8 h-8 rounded-lg bg-[#1D3557] flex-shrink-0 flex items-center justify-center">
+<div class="w-3 h-8 bg-surface-container rotate-45 opacity-60"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Coastal Indigo</span>
+<span class="font-label-sm text-[10px] text-muted-foreground truncate">Washed Weave</span>
+</div>
+</button>
+<button class="fabric-opt flex items-center gap-space-xs p-space-xs rounded-xl bg-card text-left transition-all hover:bg-surface-container" data-opt="crimson" onclick="selectColorway('crimson', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDiDAUi8OlBtZbyoAFMuqGw8NR1d9h5efBe4MkkygX31gO1ebN4h9NNdRZdm8T3DtuR2nBBakE6kREUNIENQDuqO4Bs3SjQnUfIprrNYg8ULqa05rH2n_tpetmZY8f9eIpQQ9-qIOnGaQsqBWpZqs0Z7eydb5CFYxAsXQt3xgOBbwFuFrcrUynwakVdHIM8RLTEUamjwevqTdDEaNHM53EK7-ZLzGgMXeZcU78s4iwMgaTE-shMAxLSDfcD4sOP-jw_FaM', 'Heritage Crimson Stripe', 'Natural Cotton &amp; Madder Weave')" type="button">
+<div class="w-8 h-8 rounded-lg bg-[#6B1D2F] flex-shrink-0 flex items-center justify-center">
+<div class="w-3 h-8 bg-surface-container rotate-45 opacity-60"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Heritage Crimson</span>
+<span class="font-label-sm text-[10px] text-muted-foreground truncate">Madder Stripe</span>
+</div>
+</button>
+<button class="fabric-opt flex items-center gap-space-xs p-space-xs rounded-xl bg-card text-left transition-all hover:bg-surface-container" data-opt="onyx" onclick="selectColorway('onyx', 'https://lh3.googleusercontent.com/aida-public/AB6AXuBLwKwssnJexV_0Isj5Kjk2YZJmUNmJsAj6KlybPcvmdJhhk-5H9Eo8uHqQqib_yR7ApfaO0eTKlA7EPU-b-AOvbDnaSLhQgcqjl5qeZeflow7zIM2wxrcgkXFL9Eg_VWR7jOiTANBgK7-1KKrZoZM9FgvNl-mXRHXfExxTZ8rwzqKvktFcAEZxYbvp4G25GoOuuIbDm98H_OhSW_JRuYti4bO_95MpFOcOREzdw4cYq_fbcavW6xbxrrEU75GTq4eyY_Y', 'Matte Onyx Teardrop', 'Water-Repellent Brushed Canvas')" type="button">
+<div class="w-8 h-8 rounded-lg bg-[#1F1E1D] flex-shrink-0"></div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-medium truncate">Matte Onyx</span>
+<span class="font-label-sm text-[10px] text-muted-foreground truncate">Brushed Canvas</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Scale & Proportion Selector -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-semibold">Proportions:</span>
+<a class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1" href="#dimension-guide">
+<span class="material-symbols-outlined text-sm">straighten</span>
+                Space fit guide
+              </a>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<button class="size-btn p-space-sm rounded-xl text-left transition-all bg-surface-container ring-1 ring-primary flex flex-col justify-between" id="size-regular" onclick="selectSize('regular', 1250)" type="button">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Regular</span>
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant block mt-1">100 × 95 × 85 cm</span>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground mt-2">Optimal for reading sanctuaries</span>
+</button>
+<button class="size-btn p-space-sm rounded-xl text-left transition-all bg-card hover:bg-surface-container flex flex-col justify-between" id="size-grand" onclick="selectSize('grand', 1600)" type="button">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Grand +</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+SAR 350</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant block mt-1">125 × 115 × 95 cm</span>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground mt-2">Spacious deep recliner &amp; sprawl</span>
+</button>
+</div>
+</div>
+<!-- Personalization / Embroidery Option -->
+<div class="bg-card rounded-2xl p-space-sm flex flex-col gap-space-xs transition-all">
+<button class="w-full flex items-center justify-between text-left py-1" onclick="toggleMonogram()" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">Hand-Embroidered Monogram / Calligraphy</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">+SAR 150</span>
+</button>
+<div class="hidden flex-col gap-space-xs pt-space-xs" id="monogram-fields">
+<input class="w-full bg-background rounded-lg px-space-sm py-2 font-body-md text-body-md text-on-surface placeholder:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-primary" id="monogram-input" maxlength="14" oninput="updateMonogramPreview(this.value)" placeholder="Enter initials or name (e.g. سكون / N.A)" type="text"/>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="text-muted-foreground">Style:</span>
+<button class="style-chip px-2 py-0.5 rounded bg-surface-container text-on-surface font-headline-sm text-sm" onclick="setCalligraphyStyle('thuluth')" type="button">Thuluth</button>
+<button class="style-chip px-2 py-0.5 rounded text-muted-foreground hover:bg-surface-container font-headline-sm text-sm" onclick="setCalligraphyStyle('kufic')" type="button">Kufic</button>
+<button class="style-chip px-2 py-0.5 rounded text-muted-foreground hover:bg-surface-container font-label-sm" onclick="setCalligraphyStyle('roman')" type="button">Serif Roman</button>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium italic" id="monogram-badge">Hand-stitched side tab</span>
+</div>
+</div>
+</div>
+<!-- Add to Bag CTAs & Swatch Option -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center gap-space-sm">
+<!-- Quantity Selector -->
+<div class="flex items-center bg-card rounded-xl px-space-xs py-1">
+<button class="w-8 h-9 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="adjustQty(-1)" type="button">
+<span class="material-symbols-outlined text-sm">remove</span>
+</button>
+<span class="w-8 text-center font-label-md text-label-md font-semibold text-on-surface" id="qty-val">1</span>
+<button class="w-8 h-9 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="adjustQty(1)" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+</button>
+</div>
+<!-- Main Add to Cart Button -->
+<button class="flex-1 bg-primary hover:bg-primary-container text-on-primary py-3.5 px-space-md rounded-xl font-label-md text-label-md font-semibold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.99]" id="add-to-cart-btn" onclick="handleAddToCart()" type="button">
+<span class="material-symbols-outlined text-lg">spa</span>
+<span>Add to Sanctuary • SAR <span id="btn-price">1,250</span></span>
+</button>
+</div>
+<!-- Alternative Swatch Kit Link -->
+<div class="flex items-center justify-between px-space-xs pt-1">
+<span class="font-body-md text-body-md text-muted-foreground">Undecided on fabric texture?</span>
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm underline font-medium" type="button">
+                Order Swatch Palette (SAR 35 - fully credited)
+              </button>
+</div>
+</div>
+<!-- Trust Reassurance Badges -->
+<div class="grid grid-cols-3 gap-space-xs pt-space-sm">
+<div class="bg-card p-space-xs rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-xl">local_shipping</span>
+<span class="font-label-sm text-[11px] font-bold text-on-surface mt-1">2-4 Days KSA</span>
+<span class="font-label-sm text-[10px] text-muted-foreground">Free Riyadh Delivery</span>
+</div>
+<div class="bg-card p-space-xs rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-xl">hotel</span>
+<span class="font-label-sm text-[11px] font-bold text-on-surface mt-1">30-Day Trial</span>
+<span class="font-label-sm text-[10px] text-muted-foreground">In-Home Rest Pause</span>
+</div>
+<div class="bg-card p-space-xs rounded-xl flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary text-xl">autorenew</span>
+<span class="font-label-sm text-[11px] font-bold text-on-surface mt-1">Free Refills</span>
+<span class="font-label-sm text-[10px] text-muted-foreground">Lifetime Bead Service</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: TACTILE SENSORY HIGHLIGHTS STRIP -->
+<section class="w-full bg-surface-container py-space-xl">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-2xl mb-space-lg">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Engineered For Stillness</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Quiet Anatomy In Every Stitch</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Card 1 -->
+<div class="bg-card rounded-2xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">hearing_disabled</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Silent Micro-Beads</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                High-density 1mm virgin EPS beads eliminate friction noise. Shift your body without any crisp paper crackles.
+              </p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium mt-space-md">Zero-Friction Coated</span>
+</div>
+<!-- Card 2 -->
+<div class="bg-card rounded-2xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">water_drop</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Spill Barrier Membrane</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                An internal breathable polyurethane lining repels coffee, tea, and fluids, preserving the pure interior core forever.
+              </p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium mt-space-md">Double Inner Lining</span>
+</div>
+<!-- Card 3 -->
+<div class="bg-card rounded-2xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">local_laundry_service</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Zip-Off Machine Wash</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Concealed YKK bottom zipper allows the outer organic slip to detach in under 30 seconds for delicate 30°C machine care.
+              </p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium mt-space-md">Shrink-Proof Pre-Washed</span>
+</div>
+<!-- Card 4 -->
+<div class="bg-card rounded-2xl p-space-lg shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary mb-space-md">
+<span class="material-symbols-outlined text-2xl">chair</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Sculpted Cervical Arc</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                An internal 6-panel baffle architecture maintains upper back structure so you can read or meditate without slumping.
+              </p>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium mt-space-md">Ergonomic Form Memory</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: CRAFTSMANSHIP & PHYSICAL ANATOMY SCHEMATIC -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-section">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left: Interactive Anatomy Exploded Visual -->
+<div class="lg:col-span-6 bg-card rounded-3xl p-space-lg lg:p-space-xl relative overflow-hidden">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest font-semibold block mb-space-sm">Tactile Cross Section</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-space-md">The 4-Layer Philosophy</h3>
+<!-- Visual schematic diagram -->
+<div class="flex flex-col gap-space-sm">
+<!-- Layer 1 -->
+<div class="bg-surface-container p-space-md rounded-2xl flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary w-8">01</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Organic French Linen-Cotton Cover</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Handwoven 420 GSM weight with subtle tactile slub and natural cooling properties.</p>
+</div>
+</div>
+<!-- Layer 2 -->
+<div class="bg-surface-container p-space-md rounded-2xl flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary w-8">02</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Concealed Safety Lock &amp; YKK Zipper</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Child-proof dual sliders nested in inverted fabric channels to protect hardwood floors.</p>
+</div>
+</div>
+<!-- Layer 3 -->
+<div class="bg-surface-container p-space-md rounded-2xl flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary w-8">03</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Elastic Core Membrane Bag</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">High-tensile stretch spandex liner allowing the fill to fluidly mold to lumbar curves.</p>
+</div>
+</div>
+<!-- Layer 4 -->
+<div class="bg-surface-container p-space-md rounded-2xl flex items-center gap-space-md">
+<span class="font-headline-sm text-headline-sm text-primary w-8">04</span>
+<div>
+<h4 class="font-label-lg text-label-lg text-on-surface font-semibold">Noiseless Virgin Micro-Pearls</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">320 Liters of calibrated 0.8mm–1.2mm density beads formulated for 5+ years of zero-sag resilience.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Storytelling & Atelier Process -->
+<div class="lg:col-span-6 flex flex-col gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-8 h-[1px] bg-secondary"></span>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Made in Riyadh</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface leading-tight">
+            Crafted for slow afternoons and quiet Saudi evenings.
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            In our Diriyah-adjacent studio, each Sanctuary Lounger is individually cut and assembled by master upholsterers. Rather than using generic synthetic canvas, we celebrate honest natural textures—raw linen yarns that soften with every sit and breathable cotton that remains comfortable even during Riyadh’s warmest summer afternoons.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Inspired by the timeless Majlis tradition of low-to-the-earth gathering, reworked through clean Scandinavian lines.
+          </p>
+<!-- Quote Block -->
+<div class="bg-surface-container p-space-md rounded-2xl border-l-4 border-primary">
+<p class="font-headline-sm text-headline-sm italic text-on-surface">
+              "We didn’t want to build just another bean bag. We designed an heirloom resting sculpture that invites you to breathe, reflect, and genuinely decompress."
+            </p>
+<span class="font-label-sm text-label-sm text-muted-foreground block mt-2">— Skoon Atelier Studio Team</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: ARCHITECTURAL DIMENSIONS & SCALE GUIDE -->
+<section class="w-full bg-surface py-space-xl" id="dimension-guide">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Proportions &amp; Fit</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Spatial Specifications</h2>
+</div>
+<span class="font-label-md text-label-md text-muted-foreground">Fits rooms from 12 m² to spacious open salons</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-desktop">
+<!-- Dimension Metric Card 1 -->
+<div class="bg-card p-space-lg rounded-2xl flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-muted-foreground uppercase tracking-wider">Footprint &amp; Seat</span>
+<div class="my-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-normal">100 × 95</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant ml-1">cm base</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Compact circular silhouette designed to nest comfortably in bedroom corners, bay windows, or personal studies without dominating floor traffic.
+            </p>
+</div>
+<!-- Dimension Metric Card 2 -->
+<div class="bg-card p-space-lg rounded-2xl flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-muted-foreground uppercase tracking-wider">Ergonomic Height</span>
+<div class="my-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-normal">85 cm</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant ml-1">backrest peak</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Seat height sits naturally at 38cm when occupied, creating a grounded low-seating posture that relieves thoracic pressure while reading or working with a laptop.
+            </p>
+</div>
+<!-- Dimension Metric Card 3 -->
+<div class="bg-card p-space-lg rounded-2xl flex flex-col justify-between">
+<span class="font-label-sm text-label-sm text-muted-foreground uppercase tracking-wider">Net Weight &amp; Mobility</span>
+<div class="my-space-md">
+<span class="font-headline-xl text-headline-xl text-primary font-normal">6.8 kg</span>
+<span class="font-label-lg text-label-lg text-on-surface-variant ml-1">fully filled</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Includes an integrated reinforced grab handle tucked behind the neck seam for effortless room-to-room transitions with one hand.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: CUSTOMER QUIET SPACES & REVIEWS -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-section" id="reviews">
+<div class="flex flex-col gap-space-xl">
+<!-- Review Header & Aggregate Score -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg bg-card p-space-lg lg:p-space-xl rounded-3xl">
+<div class="flex flex-col gap-space-xs">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Living With Skoon</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Sanctuary Stories</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Over 1,400 tranquil corners created across Riyadh, Jeddah, Al Khobar, and Dubai.
+            </p>
+</div>
+<div class="flex items-center gap-space-xl">
+<div class="flex flex-col items-center">
+<span class="font-headline-xxl text-headline-xxl text-primary font-normal">4.9</span>
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground mt-1">128 Verified Ratings</span>
+</div>
+<div class="hidden sm:flex flex-col gap-1 w-44 font-label-sm text-label-sm">
+<div class="flex items-center gap-2">
+<span>5★</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 92%;"></div>
+</div>
+<span>92%</span>
+</div>
+<div class="flex items-center gap-2">
+<span>4★</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 6%;"></div>
+</div>
+<span>6%</span>
+</div>
+<div class="flex items-center gap-2">
+<span>3★</span>
+<div class="flex-1 h-2 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary" style="width: 2%;"></div>
+</div>
+<span>2%</span>
+</div>
+</div>
+<button class="bg-surface-container hover:bg-surface-variant text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-xl transition-colors" type="button">
+              Write Note
+            </button>
+</div>
+</div>
+<!-- Customer Quotes Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Quote 1 -->
+<div class="bg-surface-container p-space-lg rounded-2xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground">3 weeks ago</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">"Replaced my reading armchair completely."</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                The linen weave feels substantial and organic, not plasticky like standard retail bean bags. It holds its silhouette and back support for hours. Truly calm design.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-md mt-space-md">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">FA</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Fahad Al-Husseini</span>
+<span class="font-label-sm text-label-sm text-muted-foreground">Al Malqa, Riyadh • Verified Owner</span>
+</div>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="bg-surface-container p-space-lg rounded-2xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground">Last month</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">"The silent micro-pearls are very real."</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                I can adjust positions at midnight without waking my newborn or spouse. The Arabic calligraphy embroidery on the leather side pull tag is immaculate.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-md mt-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary/20 flex items-center justify-center font-label-sm text-label-sm text-secondary font-bold">RA</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Reem Al-Zahrani</span>
+<span class="font-label-sm text-label-sm text-muted-foreground">Al Rawdah, Jeddah • Verified Owner</span>
+</div>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="bg-surface-container p-space-lg rounded-2xl flex flex-col justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-muted-foreground">2 months ago</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">"Earthy luxury for our home studio."</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Ordered the Striped Noir regular edition. The contrast between raw ecru linen and deep charcoal fits seamlessly with travertine and pale oak floors.
+              </p>
+</div>
+<div class="flex items-center gap-space-xs pt-space-md mt-space-md">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center font-label-sm text-label-sm text-primary font-bold">TA</div>
+<div>
+<span class="font-label-md text-label-md font-semibold text-on-surface block">Tariq bin Mansour</span>
+<span class="font-label-sm text-label-sm text-muted-foreground">Doha Hills, Dhahran • Verified Owner</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Curated Atmospheric Gallery (Photographic Lifestyle Proof) -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-baseline justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Curated In Slow Living Spaces</h3>
+<span class="font-label-sm text-label-sm text-muted-foreground">Tag @skoon.living to be archived</span>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm sm:gap-space-md">
+<!-- Living Space 1 -->
+<div class="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-card">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene Scandinavian Saudi living room interior with sunlight streaming through sheer curtains, showcasing a Skoon striped linen lounger bean bag placed on oak wood floor next to an olive tree pot and travertine coffee table in warm oat neutral tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdDt5YwMFYeXkJK4dut1Iqf456GpMr73XpIagV4aN5SixOvcz5MpsVGS_hSj0aIuiY2TCoSGQuUCNdYNcQwzFu0sG2vI78U0Y-UjhiHaaYWz7pVuh4N882ObBlb72WD1E9HFWg306afVM5aFomKHpYhX_BJiVbEamycLEVZwKrhHsX3JZqk6Yjny5hyfEKD6tyE1MW4maWoeV-Tq0oohU0whrPe8Byl4FEFAnMBO7spF1RUrzbPneDRg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-space-sm">
+<span class="font-label-sm text-label-sm text-white">Diriyah Villa Library</span>
+</div>
+</div>
+<!-- Living Space 2 -->
+<div class="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-card">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An airy minimalist penthouse terrace lounge in Jeddah with a dark navy striped lounger bean bag overlooking calm coastal twilight, accompanied by soft linen throws, brass candle lanterns, and clay terracotta planters." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVWeUMVhdZaqnXe2Aid-xRlAjudw40JfukxrkHYfWLWqlClq72rnpIoufXoldPdN29S0WhG475bjRcIQCWNgfj1o8nKAn1ZDtE0dM_zGA-tiGxYWkL3Kv4kBUsG-boJpb4gnZapLq0oQFgQ_VlHeVZrBEW2Ny-D6lmJS6Ok5AcFFanuQvhKSTp9DQWSdXIXLPirrtSIMsyevKezrQVkmHdaoGKu2AtmeCFF2gO96vKHoMLiNyBEGJvCQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-space-sm">
+<span class="font-label-sm text-label-sm text-white">Jeddah Corniche Flat</span>
+</div>
+</div>
+<!-- Living Space 3 -->
+<div class="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-card">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A cozy sunlit home office reading corner with warm limestone walls, displaying a crimson and ecru striped ergonomic sanctuary bean bag lounger alongside an oak side table with Saudi ceramic mug and books." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYgK8XOblND7rW6WmLyk3KyOsW8L07Y9fCYk8Rw8EqvYAlnyZzAmLz0IBBOWHBMhs5L1Xu6vsmLEYwuAa6zlYAUbP0gBL3bHm28pMP6zUz5evssBLgSok0DlFqW0OLJFiJes-O-iKmdgwxriaqlbumS9GcRCJvZeGyIPlt6mZArWafXKABJMlstEyxEKrz-Mfn9CBQYxcnkoXJw4s_9LSigYCStJpPtxVvlrJNdK7cKDli-RTRFRCVRQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-space-sm">
+<span class="font-label-sm text-label-sm text-white">Al Malqa Atelier</span>
+</div>
+</div>
+<!-- Living Space 4 -->
+<div class="group relative aspect-[4/5] rounded-2xl overflow-hidden bg-card">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A tranquil meditation and yoga sanctuary in a modern Riyadh home with tatami mats, stone water feature, and a matte onyx teardrop bean bag lounger creating an atmosphere of deep slow mindfulness and warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO3WacNrTyuyONR1hERYOy6HE8B3yYp_kMBzLo-mB1urDWCJBSRcRZiXVtFVuyfMA130GBQMnhfZXMo8BYOVeNbgl2IweWUyCzQmwI1vKqOoT9TRqvjLXNNPpmOpM24jGvC7vSwCrhhp-uEd0TdyDd_mbyEde26xlIYZpQZ7cNpbR9xgpfu3Ku2t6Gc6CeLofrIMkwkQ8yz-d2vsV3pfc94C5srjv1nhVp_r0-Kp0ALv24l7h7q5Ewxw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-space-sm">
+<span class="font-label-sm text-label-sm text-white">Quiet Sanctuary Room</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: FREQUENTLY ASKED QUESTIONS (ACCORDION) -->
+<section class="w-full bg-surface-container py-space-xl">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop max-w-4xl mx-auto">
+<div class="text-center mb-space-lg">
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Clarity &amp; Care</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Frequently Contemplated Questions</h2>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- FAQ 1 -->
+<div class="bg-card rounded-2xl p-space-md">
+<button class="w-full flex items-center justify-between text-left" onclick="toggleFaq(1)" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">How silent is the filling compared to common bean bags?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200" id="faq-icon-1">expand_more</span>
+</button>
+<div class="hidden font-body-md text-body-md text-on-surface-variant pt-space-xs leading-relaxed" id="faq-content-1">
+              Standard bean bags use oversized, irregular expanded polystyrene that squeaks aggressively with movement. Skoon utilizes custom 1mm virgin micro-pearls treated with a silicone dry-glaze barrier. This allows beads to flow silently against each other like fine dry sand with virtually zero rustle.
+            </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-card rounded-2xl p-space-md">
+<button class="w-full flex items-center justify-between text-left" onclick="toggleFaq(2)" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">How do I wash and maintain the organic linen slipcover?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200" id="faq-icon-2">expand_more</span>
+</button>
+<div class="hidden font-body-md text-body-md text-on-surface-variant pt-space-xs leading-relaxed" id="faq-content-2">
+              Simply unzip the concealed lower safety zipper and slide the outer linen cover off the sealed inner membrane core. Machine wash at 30°C on a delicate cycle using mild ecological detergent. Air dry flat in the shade to preserve the organic flax fiber weave. No ironing necessary—linen's natural drape is part of its charm.
+            </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-card rounded-2xl p-space-md">
+<button class="w-full flex items-center justify-between text-left" onclick="toggleFaq(3)" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">Can it be used on shaded outdoor terraces or roof gardens?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200" id="faq-icon-3">expand_more</span>
+</button>
+<div class="hidden font-body-md text-body-md text-on-surface-variant pt-space-xs leading-relaxed" id="faq-content-3">
+              Yes, for covered terraces, balconies, and courtyards. For open, unshaded desert climates with direct rainfall, we recommend our Matte Onyx edition, which features water-repellent canvas weave. During intense sandstorms, simply zip on the provided Skoon dust transport slip.
+            </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-card rounded-2xl p-space-md">
+<button class="w-full flex items-center justify-between text-left" onclick="toggleFaq(4)" type="button">
+<span class="font-headline-sm text-headline-sm text-on-surface font-medium">How does the 30-day in-home trial and refill guarantee work?</span>
+<span class="material-symbols-outlined text-primary transition-transform duration-200" id="faq-icon-4">expand_more</span>
+</button>
+<div class="hidden font-body-md text-body-md text-on-surface-variant pt-space-xs leading-relaxed" id="faq-content-4">
+              Sit, read, and live with your Sanctuary Lounger for 30 days in your home. If it doesn’t transform your pause, we will collect it free of charge anywhere in KSA for a 100% refund. Furthermore, all verified owners receive free refill bead shipments upon request anytime during the life of the piece.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: COMPLETE THE SANCTUARY (MATCHING ACCENTS) -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop py-space-xl">
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest font-semibold">Harmonious Companions</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">Complete The Resting Nook</h2>
+</div>
+<a class="font-label-md text-label-md text-primary hover:underline font-semibold" href="#">Explore All Accents →</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Complement 1: Footrest Ottoman -->
+<div class="bg-card rounded-2xl overflow-hidden p-space-md flex flex-col justify-between group">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A round handcrafted linen footrest ottoman in matching noir and cream striped fabric, placed neatly in an organic minimalist living space next to a low natural oak tray." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPqOpabfwUC9sTOQzLPBLEcMSPPM5q9E5n9r7iJ6Od3Opc2fNgdbqbqXLaXq1hoSHaM2Wz1UuiQk9t08nHJVHw9f1AqPb0a5EKOmOrAHQYz82X7r2r-Nh_zmMwIXouEQT8rVzP7AfGtBzBfTokAFru_YiITsCCNoIakIB6UyGyPWcghGlI6HJWwKsuCnWT3CYVgdqY9D-8JgqB6c61vwUPTFXusgSl1H1PlGGdT8KAfgXRw6giZ-GWTA"/>
+<span class="absolute top-2 right-2 bg-surface/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm px-2 py-0.5 rounded-full">Pairs Naturally</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">The Companion Ottoman</h4>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">SAR 380</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Elevate your legs into a restorative zero-gravity resting alignment.
+              </p>
+<button class="w-full mt-space-sm py-2 rounded-xl bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold transition-all" type="button">
+                Add Companion
+              </button>
+</div>
+</div>
+<!-- Complement 2: Teardrop Meditation Cushion -->
+<div class="bg-card rounded-2xl overflow-hidden p-space-md flex flex-col justify-between group">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container overflow-hidden mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An artisanal teardrop-shaped meditation cushion crafted from sage green washed cotton linen resting quietly on woven jute mat with ceramic incense burner in soft natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1mBMK6-fJ__ePctyX91J7oEy2os4CHxYNhQ6iK8n0PWr53OZ7q3KDFPuRt9nNnrHnpLKxp6RUF73M97-kl6rJy8Yi7i_NgO4WhC5AXDYj-XJOFiia8s5_SRL8i9xFY7hE7gyh3ClmwvMkuPe6ZX50RHwJNtmui01CzEC4djJ8SSgwtS1t4fvUmL0nqa3Z7GyK56TpoIQA687jl2IeDzfNl3kWmhi6VEosjL4kM0nXcMds3W-6dV_sNA"/>
+</div>
+<div>
+<div class="flex items-baseline justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Teardrop Zafu Cushion</h4>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">SAR 260</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Organic buckwheat-hull filled grounding cushion for breathwork and floor tea gatherings.
+              </p>
+<button class="w-full mt-space-sm py-2 rounded-xl bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold transition-all" type="button">
+                Add Cushion
+              </button>
+</div>
+</div>
+<!-- Complement 3: Tactile Swatch Palette -->
+<div class="bg-card rounded-2xl overflow-hidden p-space-md flex flex-col justify-between group">
+<div class="relative w-full aspect-square rounded-xl bg-surface-container overflow-hidden mb-space-sm flex items-center justify-center p-space-md">
+<img class="w-full h-full object-cover rounded-lg group-hover:scale-105 transition-transform duration-500" data-alt="A curated swatch deck of high-end tactile linen and canvas fabrics in sand, noir stripe, terracotta, and indigo bound with natural brass hardware and embossed Skoon kraft card." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfLS4zBrEi9fQrGYJ9pmj7hYhqtdI_7tRjux3TRITw_eSr6zl18eRfLhhWbX0GzQaefb4eVxqOI-6rg5n9LWFdPm5gVUN6mjHi2IyQ7eZj3OT-rk291nMrFydWMsP6UZ6K12ftL9iGTHZSOKbhpI__2XI2V2BrnD7CRj_ufaP6sO-C13doNoDS5y3pp-AsnMxZP9OVSLALGGhhv3Kdfow8UKHPBDAyfnj9p7h76jUITe6r2AtvScfsFA"/>
+</div>
+<div>
+<div class="flex items-baseline justify-between">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Curated Fabric Swatch Book</h4>
+<span class="font-label-lg text-label-lg font-semibold text-on-surface">SAR 35</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+                Experience all 8 artisanal weaves in your home’s unique daylight. 100% credited to your future lounger.
+              </p>
+<button class="w-full mt-space-sm py-2 rounded-xl bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-md text-label-md font-semibold transition-all" type="button">
+                Order Swatches
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: ATELIER CONCIERGE BANNER -->
+<section class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop pb-section">
+<div class="bg-surface-container rounded-3xl p-space-lg lg:p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-card flex items-center justify-center text-primary flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-3xl">chair_alt</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Designing an interior project or boutique cafe?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              We offer bespoke dimensioning, fire-retardant commercial canvas, and bulk studio rates across GCC.
+            </p>
+</div>
+</div>
+<button class="whitespace-nowrap px-space-lg py-space-sm rounded-xl bg-card hover:bg-surface text-on-surface font-label-md text-label-md font-semibold transition-colors shadow-sm" type="button">
+          Speak With Skoon Trade
+        </button>
+</div>
+</section>
+</div>
+</div>
+<script>
+  let currentBasePrice = 1250;
+  let currentQty = 1;
+  let hasMonogram = false;
+
+  function selectColorway(variantKey, imgSrc, title, subtitle) {
+    const mainImg = document.getElementById('main-product-view');
+    if (mainImg) {
+      mainImg.style.opacity = '0.3';
+      setTimeout(() => {
+        mainImg.src = imgSrc;
+        mainImg.style.opacity = '1';
+      }, 150);
+    }
+
+    const titleEl = document.getElementById('selected-fabric-name');
+    if (titleEl) {
+      titleEl.textContent = title;
+    }
+
+    // Update thumbnail rings
+    document.querySelectorAll('.thumb-btn').forEach(btn => {
+      if (btn.getAttribute('data-variant') === variantKey) {
+        btn.classList.add('ring-2', 'ring-primary');
+        btn.classList.remove('hover:bg-surface-variant');
+      } else {
+        btn.classList.remove('ring-2', 'ring-primary');
+        btn.classList.add('hover:bg-surface-variant');
+      }
+    });
+
+    // Update fabric option pills
+    document.querySelectorAll('.fabric-opt').forEach(btn => {
+      if (btn.getAttribute('data-opt') === variantKey) {
+        btn.classList.add('bg-surface-container', 'ring-1', 'ring-primary');
+        btn.classList.remove('bg-card');
+      } else {
+        btn.classList.remove('bg-surface-container', 'ring-1', 'ring-primary');
+        btn.classList.add('bg-card');
+      }
+    });
+  }
+
+  function selectSize(sizeKey, price) {
+    currentBasePrice = price;
+    updatePriceDisplay();
+
+    const regBtn = document.getElementById('size-regular');
+    const grandBtn = document.getElementById('size-grand');
+
+    if (sizeKey === 'regular') {
+      regBtn.classList.add('bg-surface-container', 'ring-1', 'ring-primary');
+      regBtn.classList.remove('bg-card');
+      grandBtn.classList.remove('bg-surface-container', 'ring-1', 'ring-primary');
+      grandBtn.classList.add('bg-card');
+    } else {
+      grandBtn.classList.add('bg-surface-container', 'ring-1', 'ring-primary');
+      grandBtn.classList.remove('bg-card');
+      regBtn.classList.remove('bg-surface-container', 'ring-1', 'ring-primary');
+      regBtn.classList.add('bg-card');
+    }
+  }
+
+  function toggleMonogram() {
+    const panel = document.getElementById('monogram-fields');
+    if (panel.classList.contains('hidden')) {
+      panel.classList.remove('hidden');
+      panel.classList.add('flex');
+      hasMonogram = true;
+    } else {
+      panel.classList.add('hidden');
+      panel.classList.remove('flex');
+      hasMonogram = false;
+    }
+    updatePriceDisplay();
+  }
+
+  function setCalligraphyStyle(style) {
+    document.querySelectorAll('.style-chip').forEach(chip => {
+      chip.classList.remove('bg-surface-container', 'text-on-surface');
+      chip.classList.add('text-muted-foreground');
+    });
+    event.currentTarget.classList.add('bg-surface-container', 'text-on-surface');
+    event.currentTarget.classList.remove('text-muted-foreground');
+  }
+
+  function updateMonogramPreview(val) {
+    const badge = document.getElementById('monogram-badge');
+    if (val.trim()) {
+      badge.textContent = `Embroidering "${val}" on pull-tab`;
+    } else {
+      badge.textContent = 'Hand-stitched side tab';
+    }
+  }
+
+  function adjustQty(delta) {
+    currentQty = Math.max(1, currentQty + delta);
+    document.getElementById('qty-val').textContent = currentQty;
+    updatePriceDisplay();
+  }
+
+  function updatePriceDisplay() {
+    const itemTotal = (currentBasePrice + (hasMonogram ? 150 : 0)) * currentQty;
+    document.getElementById('display-price').textContent = `SAR ${itemTotal.toLocaleString()}`;
+    document.getElementById('btn-price').textContent = itemTotal.toLocaleString();
+  }
+
+  function handleAddToCart() {
+    const btn = document.getElementById('add-to-cart-btn');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-lg animate-spin">sync</span><span>Adding To Sanctuary...</span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-lg">done</span><span>Resting in Sanctuary Bag</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 2000);
+    }, 600);
+  }
+
+  function toggleFaq(id) {
+    const content = document.getElementById(`faq-content-${id}`);
+    const icon = document.getElementById(`faq-icon-${id}`);
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container py-section"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop mb-space-xxl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-baseline gap-space-xs"><span class="font-headline-lg text-headline-lg text-on-surface">Skoon</span><span class="font-headline-sm text-headline-sm text-primary">سكون</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Handcrafted organic seating designed for tranquil spaces, restorative pause, and mindful Saudi living.</p><div class="flex flex-wrap gap-space-sm pt-space-xs"><div class="flex items-center gap-space-xs bg-card px-space-sm py-space-xs rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-primary">eco</span><span>Organic Fabrics</span></div><div class="flex items-center gap-space-xs bg-card px-space-sm py-space-xs rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-primary">pan_tool</span><span>Hand-Stitched</span></div><div class="flex items-center gap-space-xs bg-card px-space-sm py-space-xs rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-primary">local_shipping</span><span>KSA &amp; GCC Delivery</span></div></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Sanctuary</h4><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Lounge Bean Bags</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Meditation Cushions</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Outdoor Daybeds</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Replacement Liners</a></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Care &amp; Ethos</h4><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="craftsmanship" href="#">Our Craftsmanship</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="our-story" href="#">The Skoon Philosophy</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="custom-and-b2b" href="#">B2B &amp; Interior Projects</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="shipping-and-returns" href="#">Shipping &amp; Care Guide</a></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Pause With Us</h4><p class="font-body-md text-body-md text-on-surface-variant">Receive notes on mindful interiors, tactile editions, and quiet living.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-card rounded-lg overflow-hidden p-space-xs"><input class="bg-transparent border-0 outline-none text-on-surface placeholder:text-muted-foreground font-body-md text-body-md px-space-xs w-full focus:ring-0" placeholder="Your email address" type="email"/><button class="bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-lg hover:bg-primary-container transition-colors" type="button">Subscribe</button></div><span class="font-label-sm text-label-sm text-muted-foreground">Mindful dispatches only. Unsubscribe anytime.</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md"><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">Instagram</a><a class="hover:text-primary transition-colors" href="#">Pinterest</a><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></div><div>© 2025 Skoon Co. All rights reserved. Handcrafted in Saudi Arabia.</div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms</a></div></div></div></footer></body></html>

@@ -1,0 +1,775 @@
+<!DOCTYPE html><html lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>
+@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+
+/* Rich Motion Keyframes & Transitions */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes subtle-breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.018); }
+}
+
+@keyframes soft-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.5); opacity: 0.25; }
+}
+
+@keyframes ripple-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+.animate-subtle-breathe {
+  animation: subtle-breathe 8s ease-in-out infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-ripple {
+  animation: ripple-ring 2.8s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+}
+
+.card-hover-lift {
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px -8px rgba(60, 36, 21, 0.08), 0 4px 12px -2px rgba(60, 36, 21, 0.04);
+}
+
+.badge-float-1 {
+  animation: gentle-float 5.2s ease-in-out infinite 0.4s;
+}
+
+.badge-float-2 {
+  animation: gentle-float 5.8s ease-in-out infinite 1.2s;
+}
+
+.badge-float-3 {
+  animation: gentle-float 6.4s ease-in-out infinite 0.8s;
+}
+
+/* Sensory Swatch & Shimmer Effects */
+.shimmer-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+}
+.shimmer-btn:hover::after {
+  left: 200%;
+  transition: all 0.75s ease-in-out;
+}
+
+/* Accessible reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"secondary-container":"#fe9f69","on-primary-container":"#f2fff5","inverse-primary":"#accebb","surface-container-highest":"#e9e1dc","on-tertiary-fixed":"#2c1608","background":"#fff8f5","on-tertiary":"#ffffff","tertiary-container":"#8e6d5a","on-secondary-fixed-variant":"#763305","card":"#FAF8F5","primary-fixed":"#c8ebd6","on-error":"#ffffff","surface-dim":"#e1d8d4","on-secondary-container":"#763405","primary-light":"#7A9B8A","on-error-container":"#93000a","on-surface-variant":"#424844","on-tertiary-container":"#fffbfa","surface-bright":"#fff8f5","error":"#ba1a1a","muted-subtle":"#D4CFC8","secondary":"#944a1c","surface-container-lowest":"#ffffff","on-surface":"#1e1b18","on-primary-fixed-variant":"#2e4d3e","on-secondary-fixed":"#331100","outline-variant":"#c1c8c2","surface-tint":"#466555","secondary-fixed":"#ffdbca","border":"#E5DFD8","destructive":"#C44040","primary-container":"#5b7b6a","tertiary":"#735543","on-background":"#1e1b18","on-tertiary-fixed-variant":"#5d4030","tertiary-fixed-dim":"#e7bea8","muted-foreground":"#7A756E","primary":"#436252","secondary-fixed-dim":"#ffb68f","accent-hover":"#A85D33","inverse-on-surface":"#f8efea","on-primary-fixed":"#012114","surface-variant":"#e9e1dc","inverse-surface":"#34302c","primary-fixed-dim":"#accebb","error-container":"#ffdad6","on-primary":"#ffffff","surface-container":"#f5ece7","outline":"#727974","on-secondary":"#ffffff","surface":"#F5F0EB","surface-container-low":"#fbf2ed","tertiary-fixed":"#ffdbc8","surface-container-high":"#efe6e2"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-xxl":"4rem",gutter:"1.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-desktop":"5rem","section-lg":"8rem","space-md":"1rem","gutter-desktop":"2rem",margin:"1.25rem","space-sm":"0.5rem",section:"6rem","space-xs":"0.25rem","margin-tablet":"2.5rem"},fontFamily:{"label-md":["DM Sans"],"label-sm":["DM Sans"],"headline-xl":["EB Garamond"],"headline-xxl":["EB Garamond"],"body-lg":["DM Sans"],"headline-md":["EB Garamond"],"headline-xxl-mobile":["EB Garamond"],"headline-xl-mobile":["EB Garamond"],"body-xl":["DM Sans"],"headline-lg":["EB Garamond"],"body-md":["DM Sans"],"headline-sm":["EB Garamond"],"label-lg":["DM Sans"]},fontSize:{"label-md":["13px",{lineHeight:"18px",fontWeight:"500"}],"label-sm":["11px",{lineHeight:"16px",letterSpacing:"0.04em",fontWeight:"600"}],"headline-xl":["44px",{lineHeight:"52px",letterSpacing:"-0.015em",fontWeight:"400"}],"headline-xxl":["56px",{lineHeight:"64px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-md":["26px",{lineHeight:"32px",fontWeight:"500"}],"headline-xxl-mobile":["36px",{lineHeight:"42px",letterSpacing:"-0.015em",fontWeight:"400"}],"headline-xl-mobile":["30px",{lineHeight:"36px",letterSpacing:"-0.015em",fontWeight:"400"}],"body-xl":["18px",{lineHeight:"30px",fontWeight:"400"}],"headline-lg":["32px",{lineHeight:"38px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-md":["14px",{lineHeight:"23px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"26px",fontWeight:"600"}],"label-lg":["15px",{lineHeight:"20px",fontWeight:"500"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(60,36,21,0.04)]"><div class="h-20 w-full px-margin md:px-margin-tablet lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm group" data-path="collection" href="#"><img alt="Skoon سكون Logo" class="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf2IrcajWkP1w1nnjzdyu3CpvDGXPRmcWd0WmZW9GqaUv0ELGcVTHMETvIyE5ZKrt93v1s9rgsTmVRVg7l2v2lAnA8WD1vsfxKDYrPzlt678Hkpgti3ZJZ-dyjqhoVlezi5BGlbfvn4bqj71VHuFo4TVx_VwMNjxOLSsoWi8OWDyNUPcMqnyyKGrJ5Ly3J8hWW0yxQuviUtMVIe2z0tyZVcX2y1a-CqJnFb--vhcCQXz6vj9Rf4h8H7g"><span class="sr-only">Skoon سكون</span></a><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold hover:text-primary-container" data-path="collection" href="#">Collection</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="custom-and-b2b" href="#b2b">Custom &amp; B2B</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="craftsmanship" href="#ethos">Craftsmanship</a><a class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="our-story" href="#ethos">Our Story</a></nav></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center bg-card rounded-full px-space-md py-space-xs transition-shadow duration-300 focus-within:shadow-md focus-within:ring-1 focus-within:ring-primary/40"><span class="material-symbols-outlined text-outline text-lg mr-space-xs">search</span><input class="bg-transparent border-0 outline-none text-on-surface placeholder:text-muted-foreground font-body-md text-body-md w-44 lg:w-56 focus:ring-0" placeholder="Search mindful living..." type="text"></div><div class="hidden sm:flex items-center bg-card rounded-full px-space-sm py-space-xs shadow-inner"><button class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm bg-primary text-on-primary transition-all duration-300 shadow-sm" type="button">SAR</button><button class="px-space-xs py-0.5 rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" type="button">USD</button></div><a class="relative flex items-center justify-center p-space-xs text-on-surface-variant hover:text-primary transition-transform active:scale-95 duration-200" data-path="cart" href="#"><span class="material-symbols-outlined">shopping_bag</span><span class="absolute -top-1 -right-1 bg-secondary text-on-secondary rounded-full w-4 h-4 flex items-center justify-center font-label-sm text-[10px] animate-pulse">2</span></a><a class="flex items-center transition-transform hover:scale-105 active:scale-95" data-path="account" href="#"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20 hover:ring-primary transition-all" src="https://lh3.googleusercontent.com/aida/AEtjO1XDUAkJzE3GkQoV3Ivo-ZCOjjI6HGecmujvyl26zsoSfoXXjnsuxXJfJpPtTjcQaO3VctN6w1yFCJdRdJPGAmn7DHHzk0sUeyzUS8H4tpEq2Wubpb_8b7vazUTQwWY5Sm5wCdEWcboIlBDNTnrc2OjR4PKlQaGfihQYDqCr2Y7GZElO4G-WOYc6JoPHADFChLBPUmZgaSiIUWIfiM6AfVotVVlqtS_w7np6zvebrieyPCfP6HRwCCZpOzmEOlwSFhlXWm7BVzxn_pM"></a></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full">
+<!-- Interactive Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface-bright py-space-xl lg:py-space-xxl">
+<!-- Ambient glowing aura -->
+<div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-secondary-fixed/30 blur-3xl pointer-events-none animate-pulse duration-[8000ms]"></div>
+<div class="absolute top-1/2 -left-24 w-80 h-80 rounded-full bg-primary-fixed/40 blur-3xl pointer-events-none"></div>
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Text & Action Column (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg z-10">
+<div class="inline-flex items-center gap-space-xs bg-surface-container px-space-md py-space-xs rounded-full w-fit shadow-xs">
+<span class="relative flex h-2.5 w-2.5 items-center justify-center">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold">Handcrafted in Saudi Arabia</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<h1 class="font-headline-xxl text-headline-xxl text-on-surface tracking-tight leading-[1.08]">
+              The Art of <span class="italic font-normal text-primary">Quiet</span> Comfort.
+            </h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-lg">
+              Handcrafted bean bags tailored for slow living, contemplative spaces, and ergonomic serenity. Rooted in the poise of mindful stillness.
+            </p>
+</div>
+<!-- Color Swatch Interactive Switcher -->
+<div class="bg-card p-space-md rounded-xl shadow-sm border border-border/40 flex flex-col gap-space-xs max-w-md backdrop-blur-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Selected Colorway:</span>
+<span class="font-label-md text-label-md text-primary font-bold transition-all duration-300" id="hero-swatch-name">Striped Noir &amp; Cream</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs" id="hero-swatches-container">
+<!-- Swatch 1: Noir -->
+<button aria-label="Striped Noir" class="hero-swatch-btn group relative p-1 rounded-full ring-2 ring-primary transition-all duration-300 transform hover:scale-110 active:scale-95" data-color="noir" data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuADxYUl2PpOWIIIsYKNT4TG27KbsZEcdzbZms2TW0S3zDnvx08oCjqQA0BNoRbKbZ7XjDyYwEb-4d5xgWhQSjhF_hhst8E48lxzhy5HQVH2rY2bbUm2YIWC8U2M25TrwC9m9PG3Kt5J9_5rwBrG2cbX1nCzjm0_Oy5w4ZE-xmJhb5WcRqZUDrd9RPae_k1lI4307NgltzGx1YtMTjhDRi0x-Kzlmrw12-susx44JJlBOJ81yjW7o0gmTQ" data-name="Striped Noir &amp; Cream" onclick="handleHeroSwatchClick(this)" type="button">
+<span class="block w-7 h-7 rounded-full bg-[#202020] border-2 border-white shadow-sm"></span>
+</button>
+<!-- Swatch 2: Indigo -->
+<button aria-label="Coastal Indigo" class="hero-swatch-btn group relative p-1 rounded-full ring-2 ring-transparent hover:ring-outline/60 transition-all duration-300 transform hover:scale-110 active:scale-95" data-color="indigo" data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuAenbLkTjO8N8qg4EVLXj27NtI0-ABBreXxqwpKlJ8IKKSTJavTCaXgN0hl3YUa2Qq0-rSLdd0xmRTtaeEpLhDefChwgweuJkOcEHeRHwMPe4EllcdfBJMnvGxPeLbx1GwnOlcQP3Vk24i9t275QlIkPKd9Sxda2hiQnqM9E0GCGKIec9bO0pCzqD91g4lq70BLCpxDvk61MVKQJzGEC7e2iykX79B2o2OTCZmL5kJP_2DXMKZLJVvvUA" data-name="Coastal Indigo &amp; Desert Ecru" onclick="handleHeroSwatchClick(this)" type="button">
+<span class="block w-7 h-7 rounded-full bg-[#1e3a5f] border-2 border-white shadow-sm"></span>
+</button>
+<!-- Swatch 3: Crimson -->
+<button aria-label="Heritage Crimson" class="hero-swatch-btn group relative p-1 rounded-full ring-2 ring-transparent hover:ring-outline/60 transition-all duration-300 transform hover:scale-110 active:scale-95" data-color="crimson" data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDUGMAwrtA4U9ZTbpwErrjEMS-vY3XsX05Ynm34nfJvSiG7XXTrkp46ErXcrYJG0fnBndBCXJeo0TdmYJLHMUVC_1SxSQctS4dkiO7QYmH_whrGAWjFas0wHhJKRguJ1Nal6yYGISpu6xdbC5TOmqkIxofV2osDrn0ga-hY87eQ4RnZ3OzjdggTz6cMNHV77xhdPkqCK8eup_jh-QgxKvtH2fJp3wKPTpDb_6UUMlM88dQ-zwyGyFreAw" data-name="Heritage Crimson Weave" onclick="handleHeroSwatchClick(this)" type="button">
+<span class="block w-7 h-7 rounded-full bg-[#5a1e27] border-2 border-white shadow-sm"></span>
+</button>
+<!-- Swatch 4: Onyx Canvas -->
+<button aria-label="Matte Onyx" class="hero-swatch-btn group relative p-1 rounded-full ring-2 ring-transparent hover:ring-outline/60 transition-all duration-300 transform hover:scale-110 active:scale-95" data-color="onyx" data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuC1drn_1-jsVQuiILXeaUWOXGpU4RW0ui49UB8LynvP5CKORz0pTeaweyq-c5Fsx_OlaAT583mJoS6VzXb0NxBw5Tos-_yJwc7cQJGTx4XvKN6YcvLX-1zqO5DgjEQsP477d_VrG8SNgeuQkcBwEy0Tth4h1qxxgZtaYx5nxUJe_TpVaoZsDbS_SRTVvPJt75Q3qpvoSf4n3Fe1XNazdIZDbjZJemYCsxBQpGfWC8F9HWbHyCiEie-Zvg" data-name="Matte Onyx Washed Organic Canvas" onclick="handleHeroSwatchClick(this)" type="button">
+<span class="block w-7 h-7 rounded-full bg-[#171616] border-2 border-white shadow-sm"></span>
+</button>
+<div class="ml-auto pl-space-sm border-l border-muted-subtle flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base text-primary">water_drop</span>
+<span class="font-label-sm text-label-sm">Spill-Proof Linen</span>
+</div>
+</div>
+</div>
+<!-- CTAs -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<a class="shimmer-btn bg-primary text-on-primary font-label-lg text-label-lg px-space-xl py-3.5 rounded-xl hover:bg-primary-container transition-all text-center shadow-md hover:-translate-y-0.5 active:scale-95" href="#collection">
+              Explore the Collection
+            </a>
+<a class="bg-surface-container-high text-on-surface hover:text-secondary font-label-lg text-label-lg px-space-lg py-3.5 rounded-xl transition-all text-center hover:bg-surface-container border border-border/50 hover:-translate-y-0.5 active:scale-95" href="#b2b">
+              Custom &amp; Hospitality Orders
+            </a>
+</div>
+<!-- Proof Metrics -->
+<div class="flex items-center gap-space-lg pt-space-sm">
+<div class="flex -space-x-2">
+<span class="inline-block w-8 h-8 rounded-full bg-[#d4c9c2] flex items-center justify-center text-[10px] font-bold text-on-surface shadow-sm ring-2 ring-white">NA</span>
+<span class="inline-block w-8 h-8 rounded-full bg-[#b5c7bb] flex items-center justify-center text-[10px] font-bold text-on-surface shadow-sm ring-2 ring-white">SK</span>
+<span class="inline-block w-8 h-8 rounded-full bg-[#e7bea8] flex items-center justify-center text-[10px] font-bold text-on-surface shadow-sm ring-2 ring-white">RY</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center text-[#e8924b]">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-1">4.9</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary/80 animate-pulse"></span>
+              Over 1,400 tranquil homes &amp; cafes
+            </span>
+</div>
+</div>
+</div>
+<!-- Featured Product Presentation (7 Cols) -->
+<div class="lg:col-span-7 relative flex justify-center items-center mt-space-lg lg:mt-0">
+<div class="relative w-full max-w-xl aspect-square rounded-3xl bg-surface-container flex items-center justify-center p-space-md lg:p-space-lg shadow-xl overflow-hidden group animate-subtle-breathe">
+<!-- Soft radial backplate -->
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container via-surface-container-low to-white/70"></div>
+<!-- Product image with smooth floating animation & cross-fade -->
+<div class="relative z-10 w-full h-full flex items-center justify-center animate-gentle-float">
+<img alt="Skoon Sanctuary Lounger with classic striped organic cotton lining" class="w-full h-full object-contain filter drop-shadow-2xl transition-all duration-500 ease-out transform group-hover:scale-105" id="hero-lounger-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9Xw9FyTPILEKJVtYEIQ6qrvKnNwiUa9HFLJV3T2Y0z9q8iWwbcF4qom5tP8W-3oAufN0i8-k30JPDHy8YGtoR9WRC7h5pNIk1UXB598CdIpVzPy_-LBSPVQSwqhYEIfetveCBBiLvio4AGPeTVknNXuwVfQbNe8ZDPbgJ_PH9rNUgk0NfgS20FBgfFP6NWTovWx24H7UzDjk227m02Sh3pX_SpchjRZHKerfmjXdjv-iAbPKYVtC8HA">
+</div>
+<!-- Floating Architectural Badges with staggered gentle floating keyframes -->
+<div class="badge-float-1 absolute top-6 left-6 z-20 bg-surface/90 backdrop-blur-md px-space-md py-space-xs rounded-full shadow-md flex items-center gap-space-xs border border-white/60 hover:bg-white transition-all cursor-default">
+<span class="material-symbols-outlined text-primary text-sm">spa</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">100% Organic Linen Blend</span>
+</div>
+<div class="badge-float-2 absolute bottom-6 right-6 z-20 bg-surface/90 backdrop-blur-md px-space-md py-space-xs rounded-full shadow-md flex items-center gap-space-xs border border-white/60 hover:bg-white transition-all cursor-default">
+<span class="material-symbols-outlined text-secondary text-sm">adjust</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">Ergonomic Micro-bead Fill</span>
+</div>
+<div class="badge-float-3 absolute bottom-6 left-6 z-20 bg-surface/90 backdrop-blur-md px-space-md py-space-xs rounded-full shadow-md hidden sm:flex items-center gap-space-xs border border-white/60 hover:bg-white transition-all cursor-default">
+<span class="material-symbols-outlined text-primary text-sm">handyman</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">Hand-stitched in Riyadh</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value & Sensory Strip with Gentle Micro-Interactions -->
+<section class="w-full bg-surface-container py-space-lg border-y border-border/30">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-lg">
+<div class="flex items-center gap-space-sm group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-card flex items-center justify-center text-primary shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary-fixed group-hover:text-primary">
+<span class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:rotate-12">air</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors">Silent Filling</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Zero rustling virgin beads</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-card flex items-center justify-center text-primary shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary-fixed group-hover:text-primary">
+<span class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:-rotate-12">wash</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors">Removable Slips</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Machine washable at 30°C</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-card flex items-center justify-center text-primary shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-secondary-fixed group-hover:text-secondary">
+<span class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:scale-110">shield_moon</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-sm sm:text-base group-hover:text-secondary transition-colors">Spill-Proof Core</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Inner water-resistant lining</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-card flex items-center justify-center text-primary shadow-sm shrink-0 transition-transform duration-300 group-hover:scale-110 group-hover:bg-primary-fixed group-hover:text-primary">
+<span class="material-symbols-outlined text-xl transition-transform duration-300 group-hover:translate-x-1">local_shipping</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-sm sm:text-base group-hover:text-primary transition-colors">Fast KSA Delivery</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">2-4 days Riyadh &amp; Jeddah</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Collection Grid -->
+<section class="w-full py-section bg-background" id="collection">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Quiet Moments at Home</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-normal">| المختارات</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">The Core Seating Sanctuary</h2>
+</div>
+<!-- Filter Tabs with Smooth Switching -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1" id="collection-filter-tabs"><button class="filter-tab-btn bg-surface-container text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full font-label-md text-label-md whitespace-nowrap transition-all duration-300 active:scale-95 hover:bg-surface-container-high" data-filter="all" onclick="filterCollection(this, 'all')" type="button">All Shapes</button>
+<button class="filter-tab-btn bg-surface-container text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full font-label-md text-label-md whitespace-nowrap transition-all duration-300 active:scale-95 hover:bg-surface-container-high" data-filter="loungers" onclick="filterCollection(this, 'loungers')" type="button">Loungers</button>
+<button class="filter-tab-btn active bg-primary text-on-primary px-space-md py-space-xs rounded-full font-label-md text-label-md whitespace-nowrap shadow-sm transition-all duration-300 active:scale-95" data-filter="sacks" onclick="filterCollection(this, 'sacks')" type="button">Teardrop Sacks</button>
+<button class="filter-tab-btn bg-surface-container text-on-surface-variant hover:text-on-surface px-space-md py-space-xs rounded-full font-label-md text-label-md whitespace-nowrap transition-all duration-300 active:scale-95 hover:bg-surface-container-high" data-filter="ottomans" onclick="filterCollection(this, 'ottomans')" type="button">Ottomans &amp; Cushions</button></div>
+</div>
+<!-- 4-Card Mosaic Grid with Micro-Interactions & Hover Lift -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter" id="products-grid"><!-- Card 1: Noir Natural Washed Canvas -->
+<div class="product-item card-hover-lift bg-card rounded-2xl overflow-hidden shadow-sm flex flex-col group border border-border/40" data-category="sacks">
+<div class="relative bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-space-md">
+<span class="absolute top-4 left-4 z-10 bg-inverse-surface text-inverse-on-surface font-label-sm text-label-sm px-space-sm py-1 rounded-full uppercase tracking-wider shadow-sm">Minimalist</span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-on-surface-variant flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110 active:scale-90" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-lg transition-colors">favorite</span>
+</button>
+<img alt="The Teardrop Sack - Noir Natural Washed Canvas" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQW-4A7QR50ggZEEyTF_V38QNSsk16FoUoIJyWn9JlkiPgMMs_lckwHNNbgzNpRUMX5DRm_5BZixwPWkfPp84Sg-BwnNGCY1KrH5Bdvn9SSTEgHctSHqi34uFTcygBcQjg11_BMKuzxmKkIZSq_5ysQNsnoFYr49g7HdphzO27fXsnPgmdIbGkeNqqLwsx54ZLb0ZI8ojGNPeFOSFcxyX-4-DdTLF8e0iZ3tCuFdMZqLTLvpgJXtfxNg">
+<div class="absolute inset-x-4 bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+<button class="bg-surface/95 backdrop-blur text-on-surface text-label-sm font-label-sm px-space-md py-2 rounded-xl shadow-md hover:bg-primary hover:text-on-primary transition-all w-full flex items-center justify-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span> Quick View
+</button>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-medium">Meditation Series</span>
+<div class="flex items-center text-secondary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface ml-0.5">4.9</span>
+<span class="text-on-surface-variant ml-0.5">(116)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">The Teardrop Sack</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Noir Natural Washed Canvas</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-muted-foreground">Price</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SAR 890</span>
+</div>
+<button aria-label="Add to cart" class="group/btn bg-primary text-on-primary p-2.5 rounded-xl hover:bg-primary-container transition-all duration-300 shadow-sm active:scale-90 hover:rotate-3" type="button">
+<span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover/btn:-translate-x-0.5">keyboard_double_arrow_left</span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Card 2: Muted Sage Organic Canvas -->
+<div class="product-item card-hover-lift bg-card rounded-2xl overflow-hidden shadow-sm flex flex-col group border border-border/40" data-category="sacks">
+<div class="relative bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-space-md">
+<span class="absolute top-4 left-4 z-10 bg-primary text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full uppercase tracking-wider shadow-sm">Signature Hue</span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-on-surface-variant flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110 active:scale-90" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-lg transition-colors">favorite</span>
+</button>
+<img alt="The Teardrop Sack - Muted Sage Organic Canvas" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1XPcT0zU2UtbQX8--XztZ5WN8zGmjM05UKEe-_L9L38fyGIxB5GvpGBAjFf-qnMIvWQCW8gczF-5DPZHzqkqbo0LjflQBglCoR33dCljI81nMVwVYcjNKqDMgJoTZkrM1vzvnUXZsG4--I5iC8nyGTZOe6BvAKuOPrOTnzOQVEgMB48X_ZJiSnbhnfmEvBP7kZ1HL7gm1E2RBvc7gJIRzOaLfhw1xfFUNFA4t6oRN4fQA">
+<div class="absolute inset-x-4 bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+<button class="bg-surface/95 backdrop-blur text-on-surface text-label-sm font-label-sm px-space-md py-2 rounded-xl shadow-md hover:bg-primary hover:text-on-primary transition-all w-full flex items-center justify-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span> Quick View
+</button>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary font-medium">Meditation Series</span>
+<div class="flex items-center text-secondary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface ml-0.5">4.9</span>
+<span class="text-on-surface-variant ml-0.5">(91)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">The Teardrop Sack</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Muted Sage Organic Canvas</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-muted-foreground">Price</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SAR 890</span>
+</div>
+<button aria-label="Add to cart" class="group/btn bg-primary text-on-primary p-2.5 rounded-xl hover:bg-primary-container transition-all duration-300 shadow-sm active:scale-90 hover:rotate-3" type="button">
+<span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover/btn:-translate-x-0.5">keyboard_double_arrow_left</span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Card 3: Terracotta Washed Linen -->
+<div class="product-item card-hover-lift bg-card rounded-2xl overflow-hidden shadow-sm flex flex-col group border border-border/40" data-category="sacks">
+<div class="relative bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-space-md">
+<span class="absolute top-4 left-4 z-10 bg-secondary text-on-secondary font-label-sm text-label-sm px-space-sm py-1 rounded-full uppercase tracking-wider shadow-sm">Warm Earth</span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-on-surface-variant flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110 active:scale-90" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-lg transition-colors">favorite</span>
+</button>
+<img alt="The Teardrop Sack - Terracotta Washed Linen" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1Up36A6L9VvDtdUjI4FxIx8oqzZ0xkzBs7ZuxAIT1HrinFENhnWO2YozIfF0o4yykXGGrPjqGzD9et75l0-PuSR-aoOhLBLjNnU1RBO3w5a3lW_U5efBfZWDsaSzXus0xUKtXOn4AAOEuNxtNhLA38qldwvjC654lOA_C3UMKfX3CXEcOugCkHRZLwa8W3m3M_7Ryw0uL5Ad-J2_Z6BuJ1ctdWWF3GkwPwUwHPlgqiP0A">
+<div class="absolute inset-x-4 bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+<button class="bg-surface/95 backdrop-blur text-on-surface text-label-sm font-label-sm px-space-md py-2 rounded-xl shadow-md hover:bg-primary hover:text-on-primary transition-all w-full flex items-center justify-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span> Quick View
+</button>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Desert Edition</span>
+<div class="flex items-center text-secondary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface ml-0.5">4.8</span>
+<span class="text-on-surface-variant ml-0.5">(74)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">The Teardrop Sack</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Terracotta Washed Linen</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-muted-foreground">Price</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SAR 890</span>
+</div>
+<button aria-label="Add to cart" class="group/btn bg-primary text-on-primary p-2.5 rounded-xl hover:bg-primary-container transition-all duration-300 shadow-sm active:scale-90 hover:rotate-3" type="button">
+<span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover/btn:-translate-x-0.5">keyboard_double_arrow_left</span>
+</button>
+</div>
+</div>
+</div>
+
+<!-- Card 4: Deep Indigo Linen Canvas -->
+<div class="product-item card-hover-lift bg-card rounded-2xl overflow-hidden shadow-sm flex flex-col group border border-border/40" data-category="sacks">
+<div class="relative bg-surface-container aspect-square overflow-hidden flex items-center justify-center p-space-md">
+<span class="absolute top-4 left-4 z-10 bg-primary-container text-on-primary font-label-sm text-label-sm px-space-sm py-1 rounded-full uppercase tracking-wider shadow-sm">Coastal Series</span>
+<button aria-label="Add to wishlist" class="wishlist-btn absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 hover:bg-white text-on-surface-variant flex items-center justify-center transition-all duration-300 shadow-sm hover:scale-110 active:scale-90" onclick="toggleWishlist(this)" type="button">
+<span class="material-symbols-outlined text-lg transition-colors">favorite</span>
+</button>
+<img alt="The Teardrop Sack - Deep Indigo Linen Canvas" class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 ease-out" src="https://lh3.googleusercontent.com/aida/AEtjO1VnRWYt7BOnkBPF3nTZrPe7aZ_9jzcEhc-NCLzfs79NKOZleF0zWa5qG5HoODqxVofmjwtpXxuyEOIfvtQ_hiozBiWrD7QhQkM6Et2UQegfftwv7dk_T-J4dj9kOnriY0LAVffHX7R6mbwHMKBrM_UIju327W1e2DTGO01kzAs9rc7-UAOPFmmBJwNZzWe0-oiTBQpvOKKq-9x0LzJH_eduR52t9rzEhb5kWTyvPMDeDg">
+<div class="absolute inset-x-4 bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+<button class="bg-surface/95 backdrop-blur text-on-surface text-label-sm font-label-sm px-space-md py-2 rounded-xl shadow-md hover:bg-primary hover:text-on-primary transition-all w-full flex items-center justify-center gap-1 active:scale-95" type="button">
+<span class="material-symbols-outlined text-sm">visibility</span> Quick View
+</button>
+</div>
+</div>
+<div class="p-space-md flex flex-col flex-1 justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-medium">Coastal Edition</span>
+<div class="flex items-center text-secondary text-xs">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface ml-0.5">4.9</span>
+<span class="text-on-surface-variant ml-0.5">(82)</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">The Teardrop Sack</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep Indigo Linen Canvas</p>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-muted-foreground">Price</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">SAR 890</span>
+</div>
+<button aria-label="Add to cart" class="group/btn bg-primary text-on-primary p-2.5 rounded-xl hover:bg-primary-container transition-all duration-300 shadow-sm active:scale-90 hover:rotate-3" type="button">
+<span class="material-symbols-outlined text-lg transition-transform duration-300 group-hover/btn:-translate-x-0.5">keyboard_double_arrow_left</span>
+</button>
+</div>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Signature Custom & B2B Solutions Section -->
+<section class="w-full py-section bg-surface-container-high relative overflow-hidden" id="b2b">
+<!-- Organic contour background illustration -->
+<div class="absolute -right-24 -bottom-24 w-96 h-96 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Showcase Visual (6 Cols) -->
+<div class="lg:col-span-6 relative flex justify-center">
+<div class="relative w-full max-w-lg aspect-square bg-card rounded-3xl p-space-lg shadow-xl overflow-hidden flex items-center justify-center border border-border/50 group">
+<div class="relative w-full h-full flex items-center justify-center animate-gentle-float">
+<img alt="Bespoke Coffee Shop Custom Bean Bag with Habat Bon Arabic Calligraphy Embroidery" class="w-full h-full object-contain filter drop-shadow-md transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS0WcVGrLdJeH1i6HCwBm2sxFxwxFy3ZBYYujsUOg85-TdyalJhXeWSNg4r8cWGZpjykScSII-G96COqU7IJt1aXme6M9kd07X7fVdzqOWBHinYGGrlBIbagscMp7n2vKqQ8sl_7voI75SDdxXbc69FsaumKf9A38w7aBx9bE9PLUjhWAVGYmf8QkDcy44ZqsO6PNt9kV0luc-LeiMCBqV6Bq5Oji8DmWpJhzIccOKmkXvm6WdcFP3_Q">
+</div>
+<div class="absolute bottom-6 left-6 right-6 bg-surface/90 backdrop-blur-md p-space-md rounded-2xl shadow-lg flex items-center justify-between border border-white/60">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="material-symbols-outlined relative z-10 text-xl">brush</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-sm flex items-center gap-1.5">
+                    Habat Bon (حبة بن) Specialty Roastery
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Custom Calligraphy Embroidery • Al-Ula Lounge</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm font-bold bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full shadow-xs">Case Study</span>
+</div>
+</div>
+</div>
+<!-- B2B Value Proposition (6 Cols) -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Commercial &amp; Hospitality Projects</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Bespoke Living for Saudi Cafes, Resorts &amp; Studios</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant">
+              From specialty coffee spaces in Riyadh to desert retreats in Al-Ula, Skoon crafts commercial-grade, branded seating customized with Arabic typography, crests, and performance fabrics.
+            </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="bg-card p-space-md rounded-xl shadow-sm border-l-4 border-l-transparent hover:border-l-primary transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col gap-space-xs group">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-lg">edit_note</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors">Custom Monograms &amp; Typography</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision thread embroidery of your identity, Arabic script, or brand motif.</p>
+</div>
+<div class="bg-card p-space-md rounded-xl shadow-sm border-l-4 border-l-transparent hover:border-l-secondary transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col gap-space-xs group">
+<div class="w-8 h-8 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-lg">water_damage</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-secondary transition-colors">High-Traffic Water Repellency</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Hospitality-grade water and stain-repellent linings engineered for public venues.</p>
+</div>
+<div class="bg-card p-space-md rounded-xl shadow-sm border-l-4 border-l-transparent hover:border-l-tertiary transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col gap-space-xs group">
+<div class="w-8 h-8 rounded-lg bg-surface-dim flex items-center justify-center text-on-surface group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-lg">palette</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-tertiary transition-colors">Curated Textile Sourcing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Select from raw linen, textured boucle, or heavy canvas matched to your moodboard.</p>
+</div>
+<div class="bg-card p-space-md rounded-xl shadow-sm border-l-4 border-l-transparent hover:border-l-primary-light transition-all duration-300 hover:-translate-y-1 hover:shadow-md flex flex-col gap-space-xs group">
+<div class="w-8 h-8 rounded-lg bg-primary-fixed-dim flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-lg">inventory_2</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface text-base group-hover:text-primary transition-colors">Volume Tier Pricing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct workshop wholesale rates for architectural firms, interior stylists, and retail venues.</p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md pt-space-xs">
+<button class="shimmer-btn bg-secondary text-on-secondary hover:bg-accent-hover font-label-lg text-label-lg px-space-xl py-3.5 rounded-xl transition-all shadow-md text-center active:scale-95" type="button">
+              Request B2B Catalog &amp; Swatches
+            </button>
+<a class="group font-label-lg text-label-lg text-on-surface hover:text-primary transition-colors flex items-center justify-center gap-1.5 py-3" href="#">
+<span class="">View Hospitality Lookbook</span>
+<span class="material-symbols-outlined text-base transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Craftsmanship & Philosophy Section -->
+<section class="w-full py-section bg-background" id="ethos">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="max-w-2xl mx-auto text-center flex flex-col gap-space-xs mb-space-xxl">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">The Skoon Ethos</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Rooted in Tranquility (سكون)</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant">
+          We reject the disposable, noisily rustling sacks of the past. Skoon is designed as an architectural sculpture that cradles the spine and calms the room.
+        </p>
+</div>
+<!-- 3 Pillars Grid with Micro-Interaction Lift -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<div class="card-hover-lift bg-card p-space-xl rounded-2xl flex flex-col gap-space-md shadow-sm relative overflow-hidden border border-border/40 group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary mb-space-xs transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">layers</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Double-Lined Sanctuary</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every piece houses a high-density, spill-proof inner bag filled with silent, virgin micro-beads. It contours without sagging and preserves its sculptural posture year after year.
+          </p>
+<div class="mt-auto pt-space-md flex items-center text-primary font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">Silent beads, no squeaks</span>
+</div>
+</div>
+<div class="card-hover-lift bg-card p-space-xl rounded-2xl flex flex-col gap-space-md shadow-sm relative overflow-hidden border border-border/40 group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-secondary mb-space-xs transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">texture</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Tactile Elegance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Woven with heavy natural cottons and breathable European linen that soften with time. Breathable in Riyadh summers and cozy during cool desert nights.
+          </p>
+<div class="mt-auto pt-space-md flex items-center text-secondary font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">Pre-washed for shrink resistance</span>
+</div>
+</div>
+<div class="card-hover-lift bg-card p-space-xl rounded-2xl flex flex-col gap-space-md shadow-sm relative overflow-hidden border border-border/40 group">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-tertiary mb-space-xs transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-3xl">all_inclusive</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface group-hover:text-tertiary transition-colors">Consciously Made</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Outer slipcovers detach in under a minute with hidden anti-scratch zips. Machine washable, easy to swap seasonally, and backed by lifetime bead top-up support.
+          </p>
+<div class="mt-auto pt-space-md flex items-center text-tertiary font-label-sm text-label-sm gap-1">
+<span class="material-symbols-outlined text-sm">check_circle</span>
+<span class="">Circular refill guarantee</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fabric & Swatch Order CTA / Sensory Banner with Interactive Swatch Elements -->
+<section class="w-full bg-secondary-fixed/50 py-space-xl relative overflow-hidden">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="bg-card rounded-3xl p-space-lg md:p-space-xl shadow-lg flex flex-col lg:flex-row items-center justify-between gap-space-xl border border-border/40">
+<div class="flex flex-col gap-space-sm max-w-xl">
+<div class="inline-flex items-center gap-space-xs text-secondary font-label-sm text-label-sm font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-base">touch_app</span>
+<span class="">Feel Before You Decide</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Order the Skoon Tactile Swatch Kit</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Test our organic cotton weaves, striped linens, and matte canvas under your own living room lighting. Includes 5 generous fabric swatches and color cards.
+          </p>
+<div class="flex items-center gap-space-md text-on-surface-variant text-label-sm font-label-sm pt-space-xs">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">verified</span> SAR 35</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">redeem</span> 100% credited toward your lounger</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full lg:w-auto">
+<div class="flex -space-x-3 overflow-hidden p-2">
+<span class="inline-block w-12 h-12 rounded-xl bg-[#202020] shadow-md border-2 border-white transform -rotate-6 transition-transform duration-300 hover:-translate-y-2 hover:rotate-0 hover:z-20 cursor-pointer"></span>
+<span class="inline-block w-12 h-12 rounded-xl bg-[#1e3a5f] shadow-md border-2 border-white transform rotate-3 transition-transform duration-300 hover:-translate-y-2 hover:rotate-0 hover:z-20 cursor-pointer"></span>
+<span class="inline-block w-12 h-12 rounded-xl bg-[#5a1e27] shadow-md border-2 border-white transform -rotate-3 transition-transform duration-300 hover:-translate-y-2 hover:rotate-0 hover:z-20 cursor-pointer"></span>
+<span class="inline-block w-12 h-12 rounded-xl bg-[#d4c9c2] shadow-md border-2 border-white transform rotate-6 transition-transform duration-300 hover:-translate-y-2 hover:rotate-0 hover:z-20 cursor-pointer"></span>
+</div>
+<button class="shimmer-btn bg-secondary text-on-secondary hover:bg-accent-hover font-label-lg text-label-lg px-space-xl py-3.5 rounded-xl shadow-md transition-all whitespace-nowrap w-full sm:w-auto text-center active:scale-95" type="button">
+            Order Swatch Kit (SAR 35)
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Testimonials & Architectural Press -->
+<section class="w-full py-section bg-background">
+<div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-bold">Voices of Repose</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Living in Quiet Contemplation</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold ml-1">4.9 Average rating</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Quote 1 -->
+<div class="card-hover-lift bg-card p-space-lg rounded-2xl flex flex-col justify-between gap-space-lg shadow-sm border border-border/40">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center text-secondary text-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+              “The Noir Striped lounger transformed our reading nook in Diriyah. It holds its structured form unlike conventional bean bags, effortlessly elevating the whole room.”
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-muted-subtle/50">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">FA</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Fatima Al-Mansoor</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Interior Architect, Riyadh</p>
+</div>
+</div>
+</div>
+<!-- Quote 2 -->
+<div class="card-hover-lift bg-card p-space-lg rounded-2xl flex flex-col justify-between gap-space-lg shadow-sm border border-border/40">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center text-secondary text-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-default: 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+              “We ordered 14 custom branded loungers for our roastery in Jeddah. The embroidery craftsmanship with our Arabic insignia was immaculate, and the fabric washes like a dream.”
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-muted-subtle/50">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-secondary">TA</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Tariq Al-Ghamdi</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Founder, Rawiyat Cafe</p>
+</div>
+</div>
+</div>
+<!-- Quote 3 -->
+<div class="card-hover-lift bg-card p-space-lg rounded-2xl flex flex-col justify-between gap-space-lg shadow-sm border border-border/40">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center text-secondary text-sm">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface leading-snug">
+              “The quiet beads are a real revelation. No squeaking, perfectly silent when shifting posture during evening meditation. Skoon brought real tranquility into our home.”
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-muted-subtle/50">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center font-bold text-tertiary">SA</div>
+<div>
+<h4 class="font-label-md text-label-md font-bold text-on-surface">Sara &amp; Omar</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Homeowners, Al-Khobar</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container py-section"><div class="w-full px-margin md:px-margin-tablet lg:px-margin-desktop"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-gutter-desktop mb-space-xxl"><div class="lg:col-span-2 flex flex-col gap-space-md"><div class="flex items-baseline gap-space-xs"><img alt="Skoon سكون" class="h-7 w-auto object-contain opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXM2a3sUprOPx1NeUV4shQmwU4UhqcYkQg_YrB6_yQqHLbS9mOPJhDXvwQfhpvHaUXKqYSAE5sB0VtopN_u3kjRzZP3yAad-hho_yDSnFkyAfU89wkguUItgv6tNbxQxNsneHLX2K375sbSvIqio72HClt5gmsSnd5UIALqijZ91zkR-AcgINKyUujkO4-_dY_E5_MUwLnJgjf3c9WrGkp6Vkq_j11W7MB0SDSzYvKWEcSBR8JV8S0Pw"><span class="sr-only">Skoon سكون</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Handcrafted organic seating designed for tranquil spaces, restorative pause, and mindful Saudi living.</p><div class="flex flex-wrap gap-space-sm pt-space-xs"><div class="flex items-center gap-space-xs bg-card px-space-sm py-space-xs rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-primary">eco</span><span class="">Organic Fabrics</span></div><div class="flex items-center gap-space-xs bg-card px-space-sm py-space-xs rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-primary">pan_tool</span><span class="">Hand-Stitched</span></div><div class="flex items-center gap-space-xs bg-card px-space-sm py-space-xs rounded-full text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-base text-primary">local_shipping</span><span class="">KSA &amp; GCC Delivery</span></div></div></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Sanctuary</h4><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Lounge Bean Bags</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Meditation Cushions</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Outdoor Daybeds</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="collection" href="#">Replacement Liners</a></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Care &amp; Ethos</h4><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="craftsmanship" href="#">Our Craftsmanship</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="our-story" href="#">The Skoon Philosophy</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="custom-and-b2b" href="#">B2B &amp; Interior Projects</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors" data-path="shipping-and-returns" href="#">Shipping &amp; Care Guide</a></div><div class="flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface mb-space-xs">Pause With Us</h4><p class="font-body-md text-body-md text-on-surface-variant">Receive notes on mindful interiors, tactile editions, and quiet living.</p><div class="flex flex-col gap-space-xs pt-space-xs"><div class="flex items-center bg-card rounded-lg overflow-hidden p-space-xs border border-border/40 focus-within:ring-1 focus-within:ring-primary"><input class="bg-transparent border-0 outline-none text-on-surface placeholder:text-muted-foreground font-body-md text-body-md px-space-xs w-full focus:ring-0" placeholder="Your email address" type="email"><button class="shimmer-btn bg-primary text-on-primary font-label-md text-label-md px-space-md py-space-xs rounded-lg hover:bg-primary-container transition-colors active:scale-95" type="button">Subscribe</button></div><span class="font-label-sm text-label-sm text-muted-foreground">Mindful dispatches only. Unsubscribe anytime.</span></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-md text-label-md"><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="#">Instagram</a><a class="hover:text-primary transition-colors" href="#">Pinterest</a><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></div><div class="">© 2025 Skoon Co. All rights reserved. Handcrafted in Saudi Arabia.</div><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms</a></div></div></div></footer>
+<!-- Interactive JavaScript -->
+<script>
+  // Hero Live Colorway Swatch Switcher with Smooth Cross-fade
+  function handleHeroSwatchClick(button) {
+    const heroImg = document.getElementById('hero-lounger-img');
+    const swatchLabel = document.getElementById('hero-swatch-name');
+    const newSrc = button.getAttribute('data-image');
+    const newName = button.getAttribute('data-name');
+
+    // Update Swatch Active Rings
+    const allSwatches = document.querySelectorAll('.hero-swatch-btn');
+    allSwatches.forEach(btn => {
+      btn.classList.remove('ring-primary');
+      btn.classList.add('ring-transparent');
+    });
+    button.classList.add('ring-primary');
+    button.classList.remove('ring-transparent');
+
+    // Smooth Cross-fade Transition
+    if (heroImg && newSrc) {
+      heroImg.style.transition = 'opacity 250ms ease, transform 250ms ease';
+      heroImg.style.opacity = '0.2';
+      heroImg.style.transform = 'scale(0.97)';
+
+      setTimeout(() => {
+        heroImg.src = newSrc;
+        heroImg.style.opacity = '1';
+        heroImg.style.transform = 'scale(1)';
+      }, 200);
+    }
+
+    if (swatchLabel && newName) {
+      swatchLabel.textContent = newName;
+    }
+  }
+
+  // Collection Category Filter Tabs
+  function filterCollection(button, category) {
+    const tabs = document.querySelectorAll('.filter-tab-btn');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+      tab.classList.add('bg-surface-container', 'text-on-surface-variant');
+    });
+
+    button.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    button.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+
+    const products = document.querySelectorAll('#products-grid .product-item');
+    products.forEach(product => {
+      const prodCategory = product.getAttribute('data-category');
+      if (category === 'all' || prodCategory === category) {
+        product.style.display = 'flex';
+        product.style.opacity = '0';
+        product.style.transform = 'translateY(10px)';
+        setTimeout(() => {
+          product.style.transition = 'all 350ms cubic-bezier(0.16, 1, 0.3, 1)';
+          product.style.opacity = '1';
+          product.style.transform = 'translateY(0)';
+        }, 50);
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Interactive Wishlist Heart Toggle
+  function toggleWishlist(button) {
+    const icon = button.querySelector('.material-symbols-outlined');
+    const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+
+    if (isFilled) {
+      icon.style.fontVariationSettings = "'FILL' 0";
+      icon.classList.remove('text-[#ba1a1a]');
+      button.classList.remove('bg-red-50');
+    } else {
+      icon.style.fontVariationSettings = "'FILL' 1";
+      icon.classList.add('text-[#ba1a1a]');
+      button.classList.add('bg-red-50');
+      // Sensory pop feedback
+      button.style.transform = 'scale(1.25)';
+      setTimeout(() => {
+        button.style.transform = '';
+      }, 200);
+    }
+  }
+</script>
+
+
+</body></html>
