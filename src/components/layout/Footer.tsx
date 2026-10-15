@@ -1,110 +1,139 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import { ArrowUpRight, Sparkles, Mail, MapPin } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-background/80 mt-auto">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
-          {/* Brand column */}
-          <div className="lg:col-span-1">
-            <Image
-              src="/images/logos/sukoon-english.jpg"
-              alt="Sukoon"
-              width={120}
-              height={40}
-              className="h-8 w-auto object-contain brightness-0 invert mb-4"
-            />
-            <p className="text-sm leading-relaxed text-background/60 max-w-xs">
-              Comfort reimagined. Handcrafted bean bags designed for the way you actually live,
-              work, and unwind.
+    <footer className="w-full bg-surface-container-high/60 border-t border-border/80 pt-16 pb-12 text-on-surface">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        
+        {/* Top Editorial Marquee / Ticker */}
+        <div className="pb-12 border-b border-border/60 overflow-hidden">
+          <div className="animate-ticker font-display text-2xl sm:text-3xl text-on-surface/40 uppercase tracking-widest gap-12 whitespace-nowrap">
+            <span>سكون • QUIET COMFORT</span>
+            <span>//</span>
+            <span>HAND-STITCHED IN RIYADH</span>
+            <span>//</span>
+            <span>100% ORGANIC LINEN WEAVE</span>
+            <span>//</span>
+            <span>12dB SILENT VIRGIN MICRO-BEADS</span>
+            <span>//</span>
+            <span>BESPOKE HOSPITALITY EDITIONS</span>
+            <span>//</span>
+            <span>سكون • QUIET COMFORT</span>
+            <span>//</span>
+            <span>HAND-STITCHED IN RIYADH</span>
+            <span>//</span>
+            <span>100% ORGANIC LINEN WEAVE</span>
+            <span>//</span>
+            <span>12dB SILENT VIRGIN MICRO-BEADS</span>
+            <span>//</span>
+          </div>
+        </div>
+
+        {/* Main Footer Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 py-12 border-b border-border/60">
+          
+          {/* Brand Col (5 Cols) */}
+          <div className="lg:col-span-5 flex flex-col gap-4">
+            <Link href="/" className="inline-block">
+              <span className="font-display text-3xl font-bold tracking-tight text-on-surface">
+                SKOON<span className="text-primary text-4xl leading-none">.</span>
+              </span>
+            </Link>
+            <p className="text-sm text-on-surface-variant max-w-sm font-normal leading-relaxed">
+              Handcrafted bean bags tailored for slow living, contemplative spaces, and ergonomic serenity. Rooted in the poise of mindful stillness (سكون).
             </p>
+            <div className="flex items-center gap-2 font-mono text-xs text-primary pt-2">
+              <MapPin size={14} />
+              <span>Workshop: As-Sahafah District, Riyadh, Kingdom of Saudi Arabia</span>
+            </div>
           </div>
 
-          {/* Shop links */}
-          <div>
-            <h4 className="font-display text-base font-medium text-background mb-4">Shop</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/shop" className="text-sm text-background/60 hover:text-background transition-colors">
-                  All Products
-                </Link>
-              </li>
-              <li>
-                <Link href="/shop?style=nest" className="text-sm text-background/60 hover:text-background transition-colors">
-                  The Nest Collection
-                </Link>
-              </li>
-              <li>
-                <Link href="/shop?style=teardrop" className="text-sm text-background/60 hover:text-background transition-colors">
-                  The Drop Collection
-                </Link>
-              </li>
-              <li>
-                <Link href="/custom" className="text-sm text-background/60 hover:text-background transition-colors">
-                  Custom &amp; B2B Orders
-                </Link>
-              </li>
-            </ul>
+          {/* Quick Links (2 Cols) */}
+          <div className="lg:col-span-2 flex flex-col gap-3 font-mono text-xs">
+            <span className="font-bold text-on-surface uppercase tracking-wider">INDEX</span>
+            <Link href="/#collection" className="text-on-surface-variant hover:text-primary transition-colors">
+              01 // All Silhouettes
+            </Link>
+            <Link href="/#filmstrip" className="text-on-surface-variant hover:text-primary transition-colors">
+              02 // Filmstrip Reel
+            </Link>
+            <Link href="/#anatomy" className="text-on-surface-variant hover:text-primary transition-colors">
+              03 // Triple-Layer Anatomy
+            </Link>
+            <Link href="/shop" className="text-on-surface-variant hover:text-primary transition-colors">
+              04 // Online Catalog
+            </Link>
+            <Link href="/custom" className="text-on-surface-variant hover:text-primary transition-colors">
+              05 // B2B Roastery Orders
+            </Link>
+            <Link href="/about" className="text-on-surface-variant hover:text-primary transition-colors">
+              06 // The Skoon Ethos
+            </Link>
           </div>
 
-          {/* Company links */}
-          <div>
-            <h4 className="font-display text-base font-medium text-background mb-4">Company</h4>
-            <ul className="space-y-2.5">
-              <li>
-                <Link href="/about" className="text-sm text-background/60 hover:text-background transition-colors">
-                  Our Story
-                </Link>
-              </li>
-              <li>
-                <Link href="/about#contact" className="text-sm text-background/60 hover:text-background transition-colors">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+          {/* Products (2 Cols) */}
+          <div className="lg:col-span-2 flex flex-col gap-3 font-mono text-xs">
+            <span className="font-bold text-on-surface uppercase tracking-wider">SILHOUETTES</span>
+            <Link href="/shop/lounger-charcoal" className="text-on-surface-variant hover:text-primary transition-colors">
+              The Sanctuary Lounger
+            </Link>
+            <Link href="/shop/teardrop-black" className="text-on-surface-variant hover:text-primary transition-colors">
+              The Sculpted Teardrop
+            </Link>
+            <Link href="/shop/ottoman-green" className="text-on-surface-variant hover:text-primary transition-colors">
+              The Low Ottoman
+            </Link>
+            <Link href="/shop/cushion-blue" className="text-on-surface-variant hover:text-primary transition-colors">
+              The Floor Cushion
+            </Link>
+            <Link href="/shop/teardrop-custom" className="text-on-surface-variant hover:text-primary transition-colors">
+              Custom Calligraphy Edition
+            </Link>
           </div>
 
-          {/* Newsletter */}
-          <div>
-            <h4 className="font-display text-base font-medium text-background mb-4">Stay in touch</h4>
-            <p className="text-sm text-background/60 mb-4">
-              New designs, limited drops, and quiet moments — delivered to your inbox.
+          {/* Newsletter & Atelier Dispatch (3 Cols) */}
+          <div className="lg:col-span-3 flex flex-col gap-3">
+            <span className="font-mono text-xs font-bold text-on-surface uppercase tracking-wider">
+              ATELIER DISPATCH
+            </span>
+            <p className="text-xs text-on-surface-variant leading-relaxed">
+              Seasonal fabric drops, architecture collaborations, and quiet living notes.
             </p>
-            <form className="flex gap-2" onSubmit={e => e.preventDefault()}>
+            <div className="flex items-center gap-2 pt-1">
               <input
                 type="email"
-                placeholder="your@email.com"
-                className="flex-1 px-3 py-2 text-sm bg-background/10 border border-background/20 rounded-lg text-background placeholder:text-background/40 focus:outline-none focus:border-background/40"
+                placeholder="architect@studio.sa"
+                className="w-full bg-card px-3.5 py-2.5 rounded-xl border border-border text-xs font-mono text-on-surface placeholder:text-on-surface-variant/50 focus:outline-hidden focus:border-primary"
               />
               <button
-                type="submit"
-                className="px-4 py-2 text-sm font-medium bg-accent hover:bg-accent-hover text-white rounded-lg transition-colors"
+                className="px-4 py-2.5 rounded-xl bg-on-surface text-surface hover:bg-primary transition-all text-xs font-mono font-semibold shrink-0"
+                type="button"
+                aria-label="Subscribe"
               >
                 Join
               </button>
-            </form>
+            </div>
+            <span className="text-[10px] font-mono text-on-surface-variant/70">
+              No noise, no spam. Unsubscribe anytime.
+            </span>
+          </div>
+
+        </div>
+
+        {/* Bottom Sub-footer */}
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-on-surface-variant">
+          <div>
+            © {new Date().getFullYear()} SKOON ATELIER LTD. All rights reserved.
+          </div>
+          <div className="flex items-center gap-6">
+            <span className="hover:text-primary cursor-pointer">Privacy Charter</span>
+            <span className="hover:text-primary cursor-pointer">Terms of Commission</span>
+            <span className="hover:text-primary cursor-pointer">Commercial Lookbook</span>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="mt-16 pt-6 border-t border-background/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-background/40">
-            &copy; {new Date().getFullYear()} Sukoon. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            <Image
-              src="/images/logos/sukoon-arabic.jpg"
-              alt="سكون"
-              width={60}
-              height={30}
-              className="h-5 w-auto object-contain brightness-0 invert opacity-40"
-            />
-          </div>
-        </div>
       </div>
     </footer>
   );
